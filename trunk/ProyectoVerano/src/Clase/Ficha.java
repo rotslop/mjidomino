@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package proyectoverano;
+package Clase;
 import java.util.*;
 /**
  *
@@ -22,6 +22,8 @@ public class Ficha {
         this.listficha = listficha;
         this.listusuario = listusuario;
     }
+
+
 
     public int getFichaMaquina() {
         return fichaMaquina;
@@ -75,12 +77,4 @@ public static class CrearFicha {
 }
 //public void CrearFicha (){
 
-
-
-
-
-
-
-
-//}
 }
