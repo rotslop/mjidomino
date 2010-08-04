@@ -10,13 +10,15 @@
  */
 
 package Ventanas;
-
+import proyectoverano.Usuario;
+import proyectoverano.Jcalendar;
 /**
  *
  * @author Isra
  */
 public class VentanaRegistro extends javax.swing.JFrame {
-
+private String nickname,clave,nombre,apellido,avatar;
+private Jcalendar fechanaci;
     /** Creates new form VentanaRegistro */
     public VentanaRegistro() {
         initComponents();
@@ -45,7 +47,6 @@ public class VentanaRegistro extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
@@ -61,10 +62,10 @@ public class VentanaRegistro extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(900, 700));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Registro Nuevo Usuario");
@@ -110,8 +111,6 @@ public class VentanaRegistro extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Seleccione Una Imagen:");
 
-        jButton1.setText("Accept");
-
         jButton2.setText("Cancel");
 
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -122,6 +121,11 @@ public class VentanaRegistro extends javax.swing.JFrame {
         });
 
         jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
 
         jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +140,12 @@ public class VentanaRegistro extends javax.swing.JFrame {
         jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton5ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton6ActionPerformed(evt);
             }
         });
 
@@ -154,6 +164,13 @@ public class VentanaRegistro extends javax.swing.JFrame {
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/avatar6.png"))); // NOI18N
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/titulotext.png"))); // NOI18N
+
+        jButton1.setText("Acept");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -208,9 +225,10 @@ public class VentanaRegistro extends javax.swing.JFrame {
                             .add(layout.createSequentialGroup()
                                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 220, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                        .add(jButton1)
-                                        .add(jLabel5)))
+                                    .add(jLabel5)
+                                    .add(layout.createSequentialGroup()
+                                        .add(42, 42, 42)
+                                        .add(jButton1)))
                                 .add(32, 32, 32)
                                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jButton2)
@@ -270,8 +288,8 @@ public class VentanaRegistro extends javax.swing.JFrame {
                         .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(53, 53, 53)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jButton1)
-                            .add(jButton2))))
+                            .add(jButton2)
+                            .add(jButton1))))
                 .add(492, 492, 492))
         );
 
@@ -288,19 +306,42 @@ public class VentanaRegistro extends javax.swing.JFrame {
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
+        avatar="1";
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
+        avatar="4";
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
         // TODO add your handling code here:
+        avatar="5";
     }//GEN-LAST:event_jRadioButton5ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
+        avatar="2";
     }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        // TODO add your handling code here:
+        avatar="3";
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+        // TODO add your handling code here:
+        avatar="6";
+    }//GEN-LAST:event_jRadioButton6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        nickname =jTextField1.getText();
+        clave = jPasswordField1.getText();
+        nombre = "";
+        apellido = "";
+        //fechanaci = J
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
     * @param args the command line arguments
