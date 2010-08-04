@@ -19,7 +19,7 @@ import proyectoverano.Jcalendar;
  */
 public class VentanaLogin extends javax.swing.JFrame {
 private String nickname,clave,nombre,apellido,avatar;
-private String fechanaci;
+private Jcalendar fechanaci;
     /** Creates new form VentanaLogin */
     public VentanaLogin() {
         initComponents();
@@ -170,7 +170,7 @@ private String fechanaci;
         clave = jPasswordField1.getText();
         nombre = "";
         apellido = "";
-        fechanaci = "";
+        //fechanaci = J
         avatar= "";
     }//GEN-LAST:event_jButton1ActionPerformed
     Usuario logear = new Usuario(nickname,clave,nombre,apellido, fechanaci,avatar);
