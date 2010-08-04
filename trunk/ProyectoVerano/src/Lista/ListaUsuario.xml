@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ListaUsuario.xml
+    Created on : 4 de agosto de 2010, 01:49 PM
+    Author     : Minerva Verdugo Ruiz
+    Description:
+        Purpose of the document follows.
+-->
+
+<root>
+
+     <Usuario>
+<Nombre>Minerva</Nombre>
+<Apellido>Verdugo</Apellido>
+<fechanacimiento>090688</fechanacimiento>
+<Clave>123445</Clave>
+<nickname>mine</nickname>
+</Usuario>
+
+<Usuario>
+<Nombre>Javier</Nombre>
+<Apellido>Perez</Apellido>
+<fechanacimiento>230688</fechanacimiento>
+<Clave>145545</Clave>
+<nickname>javy</nickname>
+</Usuario>
+
+<Usuario>
+<Nombre>Israel</Nombre>
+<Apellido>Osuna</Apellido>
+<fechanacimiento>012388</fechanacimiento>
+<Clave>97545</Clave>
+<nickname>isra</nickname>
+</Usuario>
+
+<Usuario>
+<Nombre>German</Nombre>
+<Apellido>Quiroga</Apellido>
+<fechanacimiento>12388</fechanacimiento>
+<Clave>175795</Clave>
+<nickname>Ger</nickname>
+</Usuario>
+
+<Usuario>
+<Nombre>Jessicca</Nombre>
+<Apellido>Scielisky</Apellido>
+<fechanacimiento>1593043</fechanacimiento>
+<Clave>887563</Clave>
+<nickname>Jessi</nickname>
+
+</Usuario>
+
+<Usuario>
+<Nombre>Camila</Nombre>
+<Apellido>Verdugo</Apellido>
+<fechanacimiento>038278</fechanacimiento>
+<Clave>28495</Clave>
+<nickname>camilita</nickname>
+
+</Usuario>
+
+</root>
