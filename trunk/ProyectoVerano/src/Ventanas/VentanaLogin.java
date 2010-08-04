@@ -11,15 +11,19 @@
 
 package Ventanas;
 import java.awt.*;
+import proyectoverano.Usuario;
+import proyectoverano.Jcalendar;
 /**
  *
  * @author Isra
  */
 public class VentanaLogin extends javax.swing.JFrame {
-
+private String nickname,clave,nombre,apellido,avatar;
+private String fechanaci;
     /** Creates new form VentanaLogin */
     public VentanaLogin() {
         initComponents();
+     
     }
 
     /** This method is called from within the constructor to
@@ -45,7 +49,6 @@ public class VentanaLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(900, 700));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Username: ");
@@ -56,6 +59,11 @@ public class VentanaLogin extends javax.swing.JFrame {
         jPasswordField1.setText("jPasswordField1");
 
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Limpiar");
 
@@ -104,7 +112,7 @@ public class VentanaLogin extends javax.swing.JFrame {
                                             .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                     .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 48, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 57, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                         .add(jButton1)
                                         .add(47, 47, 47)
                                         .add(jButton2))))
@@ -157,6 +165,15 @@ public class VentanaLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        nickname =jTextField1.getText();
+        clave = jPasswordField1.getText();
+        nombre = "";
+        apellido = "";
+        fechanaci = "";
+        avatar= "";
+    }//GEN-LAST:event_jButton1ActionPerformed
+    Usuario logear = new Usuario(nickname,clave,nombre,apellido, fechanaci,avatar);
     /**
     * @param args the command line arguments
     */
