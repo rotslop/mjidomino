@@ -9,13 +9,15 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private Jcalendar fechanaci;
+    private String avatar;
 
-    public Usuario(String nickname, String clave, String nombre, String apellido, Jcalendar fechanaci) {
+    public Usuario(String nickname, String clave, String nombre, String apellido, Jcalendar fechanaci,String avatar) {
         this.nickname = nickname;
         this.clave = clave;
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechanaci = fechanaci;
+        this.avatar= avatar;
     }
 
     public String getApellido() {
@@ -24,6 +26,14 @@ public class Usuario {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public String getClave() {

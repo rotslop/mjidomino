@@ -9,39 +9,40 @@ package proyectoverano;
  *
  * @author Minerva Verdugo Ruiz
  */
-class Jcalendar {
+public class Jcalendar {
 
-    private int dia;
-    private int mes;
-    private int año;
+    private String dia;
+    private String mes;
+    private String año;
 
-
-
-    public int getAño() {
-        return año;
-    }
-
-    public void setAño(int año) {
+    public Jcalendar(String dia, String mes, String año) {
+        this.dia = dia;
+        this.mes = mes;
         this.año = año;
     }
 
-    public int getDia() {
+    public String getAño() {
+        return año;
+    }
+
+    public void setAño(String año) {
+        this.año = año;
+    }
+
+    public String getDia() {
         return dia;
     }
 
-    public void setDia(int dia) {
+    public void setDia(String dia) {
         this.dia = dia;
     }
 
-    public int getMes() {
+    public String getMes() {
         return mes;
     }
 
-    public void setMes(int mes) {
+    public void setMes(String mes) {
         this.mes = mes;
     }
-
-
-
-
+    
 }
