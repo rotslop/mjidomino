@@ -1,0 +1,9 @@
+package Clase;
+
+
+
+class LecturaDatoUsuario {
+
+
+
+}
