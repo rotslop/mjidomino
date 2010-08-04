@@ -3,8 +3,8 @@
  * and open the template in the editor.
  */
 
-package Clase;
-
+package proyectoverano;
+import java.util.*;
 /**
  *
  * @author Minerva Verdugo Ruiz
@@ -60,13 +60,27 @@ public void MoverFicha (){
 
 }
 
-public void CrearFicha (){
+public static class CrearFicha {
 
-    Ficha f;
+ public   void main(String[] args) {
 
+   Set s = new HashSet();
 
+   for(int i=0; i<=6;i++){
+     for(int j=0; j<=6;j++)
+     System.out.println(args[i]+","+args[j]);
+   }
 
-
-
+ }
 }
+//public void CrearFicha (){
+
+
+
+
+
+
+
+
+//}
 }
