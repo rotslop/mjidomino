@@ -4,13 +4,13 @@
  */
 
 package Clase;
-import Ventana.VentanaLogin;
 
 /**
  *
  * @author Minerva Verdugo Ruiz
  */
-public class RegistroUsuario {
+public class ListaFichaServidor {
+private int fichaServidor[];
 
 
 

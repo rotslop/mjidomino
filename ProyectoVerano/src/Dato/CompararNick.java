@@ -21,7 +21,7 @@ package Dato;
  */
 
 import java.util.*;
-import Logico.Usuario;
+import Clase.Usuario;
 
 /*
  * Esta clase implementa la interfaz Comparator, que permite establecer

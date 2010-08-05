@@ -11,8 +11,8 @@
 
 package Presentacion;
 import java.awt.*;
-import Logico.Usuario;
-import Logico.Jcalendar;
+import Clase.Usuario;
+import Clase.Jcalendar;
 import javax.swing.ImageIcon;
 
 /**

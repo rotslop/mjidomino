@@ -3,12 +3,13 @@
  * and open the template in the editor.
  */
 
-package Lista;
+package Clase;
 
 /**
  *
- * @author Javy
+ * @author Minerva Verdugo Ruiz
  */
-public class ListaAbstracta {
+public class ListaFichaUsuario {
+private int listUsuario[];
 
 }

@@ -4,7 +4,7 @@
  */
 
 package Dato;
-import Logico.Usuario;
+import Clase.Usuario;
 
 /**
  *

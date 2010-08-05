@@ -10,7 +10,7 @@ package Dato;
  * @author Javy
  */
 import java.util.*;
-import Logico.Usuario;
+import Clase.Usuario;
 
 
 public class ListaUsuario
