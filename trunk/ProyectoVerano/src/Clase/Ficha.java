@@ -5,6 +5,9 @@
 
 package Clase;
 import java.util.*;
+import Lista.ListaFichaServidor;
+import Lista.ListaFichaUsuario;
+
 /**
  *
  * @author Minerva Verdugo Ruiz

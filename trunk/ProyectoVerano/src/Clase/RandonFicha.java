@@ -18,7 +18,11 @@ int n;
 
 public void RandonFicha(){
 Random generator = new Random();
-int randomIndex = generator.nextInt( n );
+int randomIndex = generator.nextInt( 6);
+
+for (int i=1; i<7; i++){
+    System.out.println(randomIndex + "/");
+}
 
 }
 
