@@ -4,7 +4,7 @@
  */
 
 package Clase;
-
+import java.util.Calendar;
 /**
  *
  * @author Minerva Verdugo Ruiz
@@ -14,6 +14,8 @@ private int ID;
 private Usuario elusuario;
 private int numpartida;
 private boolean partidaganada;
+
+
 
     public Partida(int ID, Usuario elusuario, int numpartida, boolean partidaganada) {
         this.ID = ID;
@@ -67,6 +69,12 @@ private boolean partidaganada;
     public void GuardaPartida (Usuario U){// solo guarda una partida
 
     }
+
+//
+//    public void FechaInicioPartida (){
+//      Calendar.getAvailableLocales (Calendar.YEAR);
+//
+//    }
 
 
 //    public boolean PartidaTerminada(Usuario U)
