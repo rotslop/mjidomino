@@ -19,6 +19,12 @@ public class Usuario {
         this.fechanaci = fechanaci;
         this.avatar= avatar;
     }
+    // Constructor para la Prueba
+        public Usuario(String nickname,String clave, String nombre) {
+        this.nickname = nickname;
+        this.clave = clave;
+        this.nombre = nombre;
+    }
 
     public String getApellido() {
         return apellido;

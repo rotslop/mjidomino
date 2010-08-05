@@ -4,14 +4,16 @@
  */
 
 package Clase;
-import Ventana.VentanaLogin;
 
 /**
  *
  * @author Minerva Verdugo Ruiz
  */
-public class RegistroUsuario {
+public class ListaUsuario {
+Usuario elusuario [];
 
 
+public void OrdenarNumPartida (Usuario U){
 
+}
 }

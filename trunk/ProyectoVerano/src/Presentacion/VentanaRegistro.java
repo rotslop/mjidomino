@@ -10,8 +10,8 @@
  */
 
 package Presentacion;
-import Logico.Usuario;
-import Logico.Jcalendar;
+import Clase.Usuario;
+import Clase.Jcalendar;
 /**
  *
  * @author Isra
