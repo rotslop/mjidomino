@@ -4,7 +4,7 @@
  */
 
 package Clase;
-import Lista.ListaUsuario;
+//import Lista.ListaUsuario;
 /**
  En esta clase se imprimen los reportes del usuario
   */
