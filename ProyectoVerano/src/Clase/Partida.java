@@ -69,11 +69,13 @@ private boolean partidaganada;
     public void GuardaPartida (Usuario U){// solo guarda una partida
 
     }
-
+//
 //
 //    public void FechaInicioPartida (){
-//      Calendar.getAvailableLocales (Calendar.YEAR);
+////      Calendar.getAvailableLocales (Calendar.YEAR);
 //
+//     java.util.Date fecha = new Date();
+//     System.out.println (fecha);
 //    }
 
 
@@ -83,7 +85,8 @@ private boolean partidaganada;
 //
 //
 //
-//
-//        return Registrado;
-//    }
+////
+////        return Registrado;
+////    }
+//}
 }
