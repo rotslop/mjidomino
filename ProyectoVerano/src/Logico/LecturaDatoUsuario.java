@@ -1,9 +1,0 @@
-package Logico;
-
-
-
-class LecturaDatoUsuario {
-
-
-
-}
