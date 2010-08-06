@@ -1,9 +1,0 @@
-package Clase;
-
-
-
-class LecturaDatoUsuario {
-
-
-
-}
