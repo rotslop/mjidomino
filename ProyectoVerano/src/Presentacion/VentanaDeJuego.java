@@ -31,7 +31,7 @@ public class VentanaDeJuego extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jlTituloiDomino = new javax.swing.JLabel();
         panel1 = new java.awt.Panel();
         button1 = new java.awt.Button();
         button2 = new java.awt.Button();
@@ -39,10 +39,9 @@ public class VentanaDeJuego extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(900, 700));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/titulotext.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jlTituloiDomino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/titulotext.png"))); // NOI18N
+        jlTituloiDomino.setText("jLabel1");
 
         panel1.setBackground(new java.awt.Color(102, 0, 102));
 
@@ -89,14 +88,14 @@ public class VentanaDeJuego extends javax.swing.JFrame {
                         .add(panel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(layout.createSequentialGroup()
                         .add(357, 357, 357)
-                        .add(jLabel1)))
+                        .add(jlTituloiDomino)))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jlTituloiDomino, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(49, 49, 49)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(panel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -135,7 +134,7 @@ public class VentanaDeJuego extends javax.swing.JFrame {
     private java.awt.Button button1;
     private java.awt.Button button2;
     private java.awt.Button button3;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jlTituloiDomino;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 
