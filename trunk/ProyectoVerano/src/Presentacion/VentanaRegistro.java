@@ -12,6 +12,7 @@
 package Presentacion;
 import Dato.Usuario;
 import Logica.Jcalendar;
+import javax.swing.JFrame;
 /**
  *
  * @author Isra
@@ -35,101 +36,117 @@ private Jcalendar fechanaci;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jLabel8 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        bgSeleccionarAvatar = new javax.swing.ButtonGroup();
+        jlRegistroNuevousuario = new javax.swing.JLabel();
+        jlNickname = new javax.swing.JLabel();
+        jtfNickname = new javax.swing.JTextField();
+        jlNombre = new javax.swing.JLabel();
+        jtfNombre = new javax.swing.JTextField();
+        jlApellido = new javax.swing.JLabel();
+        jtfApellido = new javax.swing.JTextField();
+        jlFechaDeNacimiento = new javax.swing.JLabel();
+        jlClave = new javax.swing.JLabel();
+        jpfPassword = new javax.swing.JPasswordField();
+        jrbAvatar1 = new javax.swing.JRadioButton();
+        jlSeleccioneImage = new javax.swing.JLabel();
+        jbCancelar = new javax.swing.JButton();
+        jrbAvatar2 = new javax.swing.JRadioButton();
+        jrbAvatar3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jlAvatar1 = new javax.swing.JLabel();
+        jlAvatar2 = new javax.swing.JLabel();
+        jlAvatar3 = new javax.swing.JLabel();
+        jlAvatar5 = new javax.swing.JLabel();
+        jlAvatar4 = new javax.swing.JLabel();
+        jlAvatar6 = new javax.swing.JLabel();
+        jlTituloiDomino = new javax.swing.JLabel();
+        jbAceptar = new javax.swing.JButton();
+        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(900, 700));
-
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Registro Nuevo Usuario");
-
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("NickName (Nombre de Usuario): ");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
             }
         });
 
-        jLabel3.setBackground(new java.awt.Color(204, 255, 204));
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Nombre");
+        jlRegistroNuevousuario.setForeground(new java.awt.Color(255, 255, 255));
+        jlRegistroNuevousuario.setText("Registro Nuevo Usuario");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jlNickname.setForeground(new java.awt.Color(255, 255, 255));
+        jlNickname.setText("NickName (Nombre de Usuario): ");
+
+        jtfNickname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jtfNicknameActionPerformed(evt);
             }
         });
 
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Apellido");
+        jlNombre.setBackground(new java.awt.Color(204, 255, 204));
+        jlNombre.setForeground(new java.awt.Color(255, 255, 255));
+        jlNombre.setText("Nombre");
 
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Fecha de Nacimiento");
-
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Password( Clave): ");
-
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        jtfNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                jtfNombreActionPerformed(evt);
             }
         });
 
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        jlApellido.setForeground(new java.awt.Color(255, 255, 255));
+        jlApellido.setText("Apellido");
+
+        jtfApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                jtfApellidoActionPerformed(evt);
             }
         });
 
-        jLabel8.setBackground(new java.awt.Color(0, 255, 255));
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Seleccione Una Imagen:");
+        jlFechaDeNacimiento.setForeground(new java.awt.Color(255, 255, 255));
+        jlFechaDeNacimiento.setText("Fecha de Nacimiento");
 
-        jButton2.setText("Cancel");
+        jlClave.setForeground(new java.awt.Color(255, 255, 255));
+        jlClave.setText("Password( Clave): ");
 
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        jpfPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                jpfPasswordActionPerformed(evt);
             }
         });
 
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        bgSeleccionarAvatar.add(jrbAvatar1);
+        jrbAvatar1.setForeground(new java.awt.Color(255, 255, 255));
+        jrbAvatar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                jrbAvatar1ActionPerformed(evt);
             }
         });
 
+        jlSeleccioneImage.setBackground(new java.awt.Color(0, 255, 255));
+        jlSeleccioneImage.setForeground(new java.awt.Color(255, 255, 255));
+        jlSeleccioneImage.setText("Seleccione Una Imagen:");
+
+        jbCancelar.setText("Cancel");
+
+        bgSeleccionarAvatar.add(jrbAvatar2);
+        jrbAvatar2.setForeground(new java.awt.Color(255, 255, 255));
+        jrbAvatar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbAvatar2ActionPerformed(evt);
+            }
+        });
+
+        bgSeleccionarAvatar.add(jrbAvatar3);
+        jrbAvatar3.setForeground(new java.awt.Color(255, 255, 255));
+        jrbAvatar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbAvatar3ActionPerformed(evt);
+            }
+        });
+
+        bgSeleccionarAvatar.add(jRadioButton4);
         jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +154,7 @@ private Jcalendar fechanaci;
             }
         });
 
+        bgSeleccionarAvatar.add(jRadioButton5);
         jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,156 +162,203 @@ private Jcalendar fechanaci;
             }
         });
 
+        bgSeleccionarAvatar.add(jRadioButton6);
         jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton6ActionPerformed(evt);
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar1.png"))); // NOI18N
+        jlAvatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar1.png"))); // NOI18N
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar2.png"))); // NOI18N
+        jlAvatar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar2.png"))); // NOI18N
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar3.png"))); // NOI18N
+        jlAvatar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar3.png"))); // NOI18N
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar5.png"))); // NOI18N
+        jlAvatar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar5.png"))); // NOI18N
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar4.png"))); // NOI18N
+        jlAvatar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar4.png"))); // NOI18N
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar6.png"))); // NOI18N
+        jlAvatar6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/avatar6.png"))); // NOI18N
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/titulotext.png"))); // NOI18N
+        jlTituloiDomino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/titulotext.png"))); // NOI18N
 
-        jButton1.setText("Acept");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbAceptar.setText("Acept");
+        jbAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbAceptarActionPerformed(evt);
             }
         });
 
-        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(layout.createSequentialGroup()
-                .add(30, 30, 30)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(jLabel1)
-                        .add(125, 125, 125)
-                        .add(jLabel16))
-                    .add(jLabel8)
-                    .add(layout.createSequentialGroup()
-                        .add(jRadioButton1)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jLabel7)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButton2)
-                        .add(2, 2, 2)
-                        .add(jLabel9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 90, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButton3)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jLabel10)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButton4)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jLabel13)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jLabel11)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButton6)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jLabel15))
-                    .add(layout.createSequentialGroup()
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(jLabel3)
-                            .add(jLabel4)
-                            .add(jTextField3)
-                            .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 99, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(14, 14, 14)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(layout.createSequentialGroup()
-                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 220, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jLabel5)
-                                    .add(layout.createSequentialGroup()
-                                        .add(42, 42, 42)
-                                        .add(jButton1)))
-                                .add(32, 32, 32)
-                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jButton2)
-                                    .add(jLabel6)
-                                    .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 135, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(77, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(jLabel16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(jLabel1)
-                        .add(29, 29, 29)))
-                .add(jLabel8)
-                .add(18, 18, 18)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jRadioButton6)
-                    .add(jRadioButton5)
-                    .add(jLabel13)
-                    .add(jLabel11)
-                    .add(jLabel9)
-                    .add(jLabel7)
-                    .add(jRadioButton1)
-                    .add(jRadioButton2)
-                    .add(jLabel10)
-                    .add(jRadioButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jRadioButton4)
-                    .add(jLabel15))
-                .add(42, 42, 42)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel2)
-                    .add(jLabel3)
-                    .add(jLabel6))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(45, 45, 45)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel4)
-                    .add(jLabel5))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(53, 53, 53)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton2)
-                    .add(jButton1))
-                .add(492, 492, 492))
-        );
+        dateChooserCombo1.setCurrentView(new datechooser.view.appearance.AppearancesList("Swing",
+            new datechooser.view.appearance.ViewAppearance("custom",
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(0, 0, 255),
+                    true,
+                    true,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
+                    new java.awt.Color(0, 0, 255),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
+                    new java.awt.Color(128, 128, 128),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.LabelPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.LabelPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(255, 0, 0),
+                    false,
+                    false,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                (datechooser.view.BackRenderer)null,
+                false,
+                true)));
+    dateChooserCombo1.setLocale(new java.util.Locale("en", "MT", ""));
 
-        pack();
+    org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
+    getContentPane().setLayout(layout);
+    layout.setHorizontalGroup(
+        layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+        .add(layout.createSequentialGroup()
+            .add(30, 30, 30)
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .add(jlRegistroNuevousuario)
+                    .add(125, 125, 125)
+                    .add(jlTituloiDomino))
+                .add(jlSeleccioneImage)
+                .add(layout.createSequentialGroup()
+                    .add(jrbAvatar1)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(jlAvatar1)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(jrbAvatar2)
+                    .add(2, 2, 2)
+                    .add(jlAvatar2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 90, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(jrbAvatar3)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                    .add(jlAvatar3)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(jRadioButton4)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(jlAvatar4)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(jRadioButton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(jlAvatar5)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(jRadioButton6)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(jlAvatar6))
+                .add(layout.createSequentialGroup()
+                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                        .add(jlNombre)
+                        .add(jlApellido)
+                        .add(jtfApellido)
+                        .add(jtfNombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 99, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(14, 14, 14)
+                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(dateChooserCombo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jtfNickname, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(layout.createSequentialGroup()
+                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                .add(jlNickname, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 220, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jlFechaDeNacimiento)
+                                .add(layout.createSequentialGroup()
+                                    .add(42, 42, 42)
+                                    .add(jbAceptar)))
+                            .add(32, 32, 32)
+                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                .add(jbCancelar)
+                                .add(jlClave)
+                                .add(jpfPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 135, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
+            .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    layout.setVerticalGroup(
+        layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+        .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .add(jlTituloiDomino, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap()
+                    .add(jlRegistroNuevousuario)
+                    .add(29, 29, 29)))
+            .add(jlSeleccioneImage)
+            .add(18, 18, 18)
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(jRadioButton6)
+                .add(jRadioButton5)
+                .add(jlAvatar4)
+                .add(jlAvatar5)
+                .add(jlAvatar2)
+                .add(jlAvatar1)
+                .add(jrbAvatar1)
+                .add(jrbAvatar2)
+                .add(jlAvatar3)
+                .add(jrbAvatar3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jRadioButton4)
+                .add(jlAvatar6))
+            .add(42, 42, 42)
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(jlNickname)
+                .add(jlNombre)
+                .add(jlClave))
+            .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(jtfNombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jtfNickname, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jpfPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(45, 45, 45)
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(jlApellido)
+                .add(jlFechaDeNacimiento))
+            .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(jtfApellido, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(dateChooserCombo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(53, 53, 53)
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(jbCancelar)
+                .add(jbAceptar))
+            .add(261, 261, 261))
+    );
+
+    pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jtfNicknameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNicknameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jtfNicknameActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jtfNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jtfNombreActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void jrbAvatar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbAvatar1ActionPerformed
         // TODO add your handling code here:
         avatar="1";
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jrbAvatar1ActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
@@ -305,33 +370,46 @@ private Jcalendar fechanaci;
         avatar="5";
     }//GEN-LAST:event_jRadioButton5ActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void jrbAvatar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbAvatar2ActionPerformed
         // TODO add your handling code here:
         avatar="2";
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_jrbAvatar2ActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void jrbAvatar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbAvatar3ActionPerformed
         // TODO add your handling code here:
         avatar="3";
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_jrbAvatar3ActionPerformed
 
     private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
         // TODO add your handling code here:
         avatar="6";
     }//GEN-LAST:event_jRadioButton6ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAceptarActionPerformed
         // TODO add your handling code here:
-        nickname =jTextField1.getText();
-        clave = jPasswordField1.getText();
+        nickname =jtfNickname.getText();
+        clave = jpfPassword.getText();
         nombre = "";
         apellido = "";
-        //fechanaci = J
-    }//GEN-LAST:event_jButton1ActionPerformed
+        
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        //fechanaci = J
+    }//GEN-LAST:event_jbAceptarActionPerformed
+
+    private void jpfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpfPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_jpfPasswordActionPerformed
+
+    private void jtfApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfApellidoActionPerformed
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+    Presentacion.VentanaLogin ventana = new Presentacion.VentanaLogin();
+    ventana.VentanaPadre();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowClosed
 
     /**
     * @param args the command line arguments
@@ -339,32 +417,34 @@ private Jcalendar fechanaci;
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.ButtonGroup bgSeleccionarAvatar;
+    private datechooser.beans.DateChooserCombo dateChooserCombo1;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton jbAceptar;
+    private javax.swing.JButton jbCancelar;
+    private javax.swing.JLabel jlApellido;
+    private javax.swing.JLabel jlAvatar1;
+    private javax.swing.JLabel jlAvatar2;
+    private javax.swing.JLabel jlAvatar3;
+    private javax.swing.JLabel jlAvatar4;
+    private javax.swing.JLabel jlAvatar5;
+    private javax.swing.JLabel jlAvatar6;
+    private javax.swing.JLabel jlClave;
+    private javax.swing.JLabel jlFechaDeNacimiento;
+    private javax.swing.JLabel jlNickname;
+    private javax.swing.JLabel jlNombre;
+    private javax.swing.JLabel jlRegistroNuevousuario;
+    private javax.swing.JLabel jlSeleccioneImage;
+    private javax.swing.JLabel jlTituloiDomino;
+    private javax.swing.JPasswordField jpfPassword;
+    private javax.swing.JRadioButton jrbAvatar1;
+    private javax.swing.JRadioButton jrbAvatar2;
+    private javax.swing.JRadioButton jrbAvatar3;
+    private javax.swing.JTextField jtfApellido;
+    private javax.swing.JTextField jtfNickname;
+    private javax.swing.JTextField jtfNombre;
     // End of variables declaration//GEN-END:variables
 
 }
