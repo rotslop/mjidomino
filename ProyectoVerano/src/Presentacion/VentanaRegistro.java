@@ -52,7 +52,7 @@ private Jcalendar fechanaci;
         jbCancelar = new javax.swing.JButton();
         jrbAvatar2 = new javax.swing.JRadioButton();
         jrbAvatar3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        jrbAvatar4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
         jlAvatar1 = new javax.swing.JLabel();
@@ -146,11 +146,11 @@ private Jcalendar fechanaci;
             }
         });
 
-        bgSeleccionarAvatar.add(jRadioButton4);
-        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        bgSeleccionarAvatar.add(jrbAvatar4);
+        jrbAvatar4.setForeground(new java.awt.Color(255, 255, 255));
+        jrbAvatar4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                jrbAvatar4ActionPerformed(evt);
             }
         });
 
@@ -217,7 +217,7 @@ private Jcalendar fechanaci;
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(jlAvatar3)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButton4)
+                        .add(jrbAvatar4)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jlAvatar4)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -276,7 +276,7 @@ private Jcalendar fechanaci;
                     .add(jrbAvatar2)
                     .add(jlAvatar3)
                     .add(jrbAvatar3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jRadioButton4)
+                    .add(jrbAvatar4)
                     .add(jlAvatar6))
                 .add(42, 42, 42)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
@@ -319,10 +319,10 @@ private Jcalendar fechanaci;
         avatar="1";
     }//GEN-LAST:event_jrbAvatar1ActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void jrbAvatar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbAvatar4ActionPerformed
         // TODO add your handling code here:
         avatar="4";
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_jrbAvatar4ActionPerformed
 
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
         // TODO add your handling code here:
@@ -378,7 +378,6 @@ private Jcalendar fechanaci;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bgSeleccionarAvatar;
     private com.toedter.calendar.JDateChooser jDateChooser1;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JButton jbAceptar;
@@ -401,6 +400,7 @@ private Jcalendar fechanaci;
     private javax.swing.JRadioButton jrbAvatar1;
     private javax.swing.JRadioButton jrbAvatar2;
     private javax.swing.JRadioButton jrbAvatar3;
+    private javax.swing.JRadioButton jrbAvatar4;
     private javax.swing.JTextField jtfApellido;
     private javax.swing.JTextField jtfNickname;
     private javax.swing.JTextField jtfNombre;
