@@ -190,6 +190,8 @@ private Jcalendar fechanaci;
             }
         });
 
+        jDateChooser1.setDateFormatString("dd/MM/yy");
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
