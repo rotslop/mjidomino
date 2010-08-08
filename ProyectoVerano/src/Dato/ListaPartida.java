@@ -3,19 +3,15 @@
  * and open the template in the editor.
  */
 
-package Logica;
+package Dato;
 
-import Dato.Usuario;
+import Logica.Partida;
 
 /**
  *
  * @author Minerva Verdugo Ruiz
  */
-public class ListaUsuario {
-Usuario elusuario [];
+public class ListaPartida {
+    private Partida listPartida [];
 
-
-public void OrdenarNumPartida (Usuario U){
-
-}
 }

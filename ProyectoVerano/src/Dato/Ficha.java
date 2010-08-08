@@ -14,10 +14,10 @@
 //
 // private int fichaServidor;
 // private int fichaMaquina;
-// private ListaFichaServidor listficha[];
+// private ListaFicha listficha[];
 // private ListaFichaUsuario listusuario[];
 //
-//    public Ficha(int fichaServidor, int fichaMaquina, ListaFichaServidor[] listficha, ListaFichaUsuario[] listusuario) {
+//    public Ficha(int fichaServidor, int fichaMaquina, ListaFicha[] listficha, ListaFichaUsuario[] listusuario) {
 //        this.fichaServidor = fichaServidor;
 //        this.fichaMaquina = fichaMaquina;
 //        this.listficha = listficha;
@@ -40,11 +40,11 @@
 //        this.fichaServidor = fichaServidor;
 //    }
 //
-//    public ListaFichaServidor[] getListficha() {
+//    public ListaFicha[] getListficha() {
 //        return listficha;
 //    }
 //
-//    public void setListficha(ListaFichaServidor[] listficha) {
+//    public void setListficha(ListaFicha[] listficha) {
 //        this.listficha = listficha;
 //    }
 //
@@ -90,9 +90,9 @@
  * and open the template in the editor.
  */
 
-package Logica;
+package Dato;
 import java.util.*;
-//import Lista.ListaFichaServidor;
+//import Lista.ListaFicha;
 //import Lista.ListaFichaUsuario;
 
 /**
@@ -103,10 +103,10 @@ public class Ficha {
 
  private int fichaServidor;
  private int fichaMaquina;
- private ListaFichaServidor listficha[];
- private ListaFichaUsuario listusuario[];
+ private ListaFicha listficha[];
+ private ListaFicha listusuario[];
 
-    public Ficha(int fichaServidor, int fichaMaquina, ListaFichaServidor[] listficha, ListaFichaUsuario[] listusuario) {
+    public Ficha(int fichaServidor, int fichaMaquina, ListaFicha[] listficha, ListaFicha[] listusuario) {
         this.fichaServidor = fichaServidor;
         this.fichaMaquina = fichaMaquina;
         this.listficha = listficha;
@@ -131,19 +131,19 @@ public class Ficha {
         this.fichaServidor = fichaServidor;
     }
 
-    public ListaFichaServidor[] getListficha() {
+    public ListaFicha[] getListficha() {
         return listficha;
     }
 
-    public void setListficha(ListaFichaServidor[] listficha) {
+    public void setListficha(ListaFicha[] listficha) {
         this.listficha = listficha;
     }
 
-    public ListaFichaUsuario[] getListusuario() {
+    public ListaFicha[] getListusuario() {
         return listusuario;
     }
 
-    public void setListusuario(ListaFichaUsuario[] listusuario) {
+    public void setListusuario(ListaFicha[] listusuario) {
         this.listusuario = listusuario;
     }
 
