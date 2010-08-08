@@ -1,8 +1,6 @@
 
 package Dato;
 
-import Logica.Jcalendar;
-
 
 public class Usuario {
 

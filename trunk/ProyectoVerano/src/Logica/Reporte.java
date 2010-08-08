@@ -4,6 +4,7 @@
  */
 
 package Logica;
+import Dato.ListaUsuario;
 //import Lista.ListaUsuario;
 /**
  En esta clase se imprimen los reportes del usuario

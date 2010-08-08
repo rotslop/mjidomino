@@ -3,13 +3,15 @@
  * and open the template in the editor.
  */
 
-package Logica;
+package Dato;
 
 /**
  *
  * @author Minerva Verdugo Ruiz
  */
-public class ListaFichaUsuario {
-private int listUsuario[];
+public class ListaFicha {
+private int fichaServidor[];
+
+
 
 }
