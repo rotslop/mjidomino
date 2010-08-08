@@ -13,6 +13,8 @@ package Presentacion;
 import Dato.Usuario;
 import Dato.Jcalendar;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.ButtonModel;
 /**
  *
  * @author Isra
@@ -349,7 +351,16 @@ private Jcalendar fechanaci;
     }//GEN-LAST:event_jRadioButton6ActionPerformed
 
     private void jbAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAceptarActionPerformed
-        // TODO add your handling code here:
+
+        if(bgSeleccionarAvatar.isSelected(null)){
+        JOptionPane.showMessageDialog(null,"Seleccione Avatar","Error",JOptionPane.ERROR_MESSAGE);
+
+        }
+        if(jtfNombre.getText().toString().isEmpty()|| jtfApellido.getText().toString().isEmpty()|| jpfPassword.getText().toString().isEmpty()){
+
+JOptionPane.showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JOptionPane.ERROR_MESSAGE);
+
+        }// TODO add your handling code here:
         nickname =jtfNickname.getText();
         clave = jpfPassword.getText();
         nombre = "";
@@ -368,9 +379,9 @@ private Jcalendar fechanaci;
     }//GEN-LAST:event_jtfApellidoActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+
     Presentacion.VentanaLogin ventana = new Presentacion.VentanaLogin();
     ventana.VentanaPadre();
-
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosed
 

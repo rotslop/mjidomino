@@ -16,7 +16,7 @@ import Dato.Jcalendar;
 import Presentacion.VentanaLogin;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Isra
@@ -59,6 +59,14 @@ private Jcalendar fechanaci;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         jlUsername.setForeground(new java.awt.Color(255, 255, 255));
         jlUsername.setText("Username: ");
@@ -77,7 +85,18 @@ private Jcalendar fechanaci;
             }
         });
 
+        jtfUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfUsernameActionPerformed(evt);
+            }
+        });
+
         jbAceptar.setText("Aceptar");
+        jbAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbAceptarMouseClicked(evt);
+            }
+        });
         jbAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbAceptarActionPerformed(evt);
@@ -183,15 +202,23 @@ private Jcalendar fechanaci;
     }//GEN-LAST:event_jbRegistrarActionPerformed
 
     private void jbAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAceptarActionPerformed
-       new VentandaDePartdida_VDP().setVisible(true);
-        nickname =jtfUsername.getText();
+
+       
+        if (jtfUsername.getText().toString().isEmpty()|| jpwPassword.getText().toString().isEmpty()){
+
+JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VALIDACION",JOptionPane.ERROR_MESSAGE);
+
+        }
+ else{
+        new VentandaDePartdida_VDP().setVisible(true);
+            nickname =jtfUsername.getText();
         clave = jpwPassword.getText();
         nombre = "";
         apellido = "";
         //fechanaci = J
         avatar= "";
     }//GEN-LAST:event_jbAceptarActionPerformed
-
+    }
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
 
         jtfUsername.setText("");
@@ -204,9 +231,30 @@ private Jcalendar fechanaci;
     }//GEN-LAST:event_jpwPasswordActionPerformed
 
     private void jpwPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpwPasswordMouseClicked
-    jpwPassword.setText("");
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jpwPasswordMouseClicked
+
+    private void jbAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbAceptarMouseClicked
+    
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbAceptarMouseClicked
+
+    private void jtfUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfUsernameActionPerformed
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+//JOptionPane.showConfirmDialog(null, "Desea Salir del Sistema?","iDomino",JOptionPane.YES_NO_CANCEL_OPTION);//showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JOptionPane.ERROR_MESSAGE);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowClosed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+JOptionPane.showConfirmDialog(null, "Desea Salir del Sistema?","iDomino",JOptionPane.YES_NO_CANCEL_OPTION);//showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JOptionPane.ERROR_MESSAGE);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowClosing
 
     public void setJtfUsername(JTextField jtfUsername) {
         this.jtfUsername = jtfUsername;

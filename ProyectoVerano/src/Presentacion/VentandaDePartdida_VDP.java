@@ -32,57 +32,57 @@ public class VentandaDePartdida_VDP extends javax.swing.JFrame {
     private void initComponents() {
 
         jbTitulo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        jbCrearParida = new javax.swing.JButton();
+        jbEstadisticas = new javax.swing.JButton();
+        jbCargarPartida = new javax.swing.JButton();
+        jlimg1VDP = new javax.swing.JLabel();
+        jlimgVDP2 = new javax.swing.JLabel();
+        jlimgVDP3 = new javax.swing.JLabel();
+        jbRecords = new javax.swing.JButton();
+        jlimgVDP4 = new javax.swing.JLabel();
+        jbMyprofile = new javax.swing.JButton();
+        jlimgVDP5 = new javax.swing.JLabel();
+        jbSalir = new javax.swing.JButton();
+        jlimgVDP6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
 
         jbTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/titulotext.png"))); // NOI18N
 
-        jButton1.setText("Crear Partida");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbCrearParida.setText("Crear Partida");
+        jbCrearParida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbCrearParidaActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Estadisticas");
+        jbEstadisticas.setText("Estadisticas");
 
-        jButton3.setText("Cargar Partida");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jbCargarPartida.setText("Cargar Partida");
+        jbCargarPartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jbCargarPartidaActionPerformed(evt);
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img1VDP.png"))); // NOI18N
+        jlimg1VDP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img1VDP.png"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img2VDP.png"))); // NOI18N
+        jlimgVDP2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img2VDP.png"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img3VDP.png"))); // NOI18N
+        jlimgVDP3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img3VDP.png"))); // NOI18N
 
-        jButton4.setText("Records");
+        jbRecords.setText("Records");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/trofeoVDP.png"))); // NOI18N
+        jlimgVDP4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/trofeoVDP.png"))); // NOI18N
 
-        jButton5.setText("MyProfile");
+        jbMyprofile.setText("MyProfile");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/perfilVDP.png"))); // NOI18N
+        jlimgVDP5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/perfilVDP.png"))); // NOI18N
 
-        jButton6.setText("Salir!");
+        jbSalir.setText("Salir!");
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/salirVDP.png"))); // NOI18N
+        jlimgVDP6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/salirVDP.png"))); // NOI18N
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,30 +91,30 @@ public class VentandaDePartdida_VDP extends javax.swing.JFrame {
             .add(layout.createSequentialGroup()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(layout.createSequentialGroup()
-                        .add(jButton1)
+                        .add(jbCrearParida)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jLabel2))
+                        .add(jlimg1VDP))
                     .add(layout.createSequentialGroup()
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jButton3, 0, 0, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jButton2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jbCargarPartida, 0, 0, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jbEstadisticas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(layout.createSequentialGroup()
                                 .add(18, 18, 18)
-                                .add(jLabel3))
+                                .add(jlimgVDP2))
                             .add(layout.createSequentialGroup()
                                 .add(32, 32, 32)
-                                .add(jLabel4)))))
+                                .add(jlimgVDP3)))))
                 .add(145, 145, 145)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButton4)
-                    .add(jButton5)
-                    .add(jButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 111, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jbRecords)
+                    .add(jbMyprofile)
+                    .add(jbSalir, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 111, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabel7)
-                    .add(jLabel6)
-                    .add(jLabel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jlimgVDP6)
+                    .add(jlimgVDP5)
+                    .add(jlimgVDP4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(163, 163, 163))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(344, Short.MAX_VALUE)
@@ -129,42 +129,42 @@ public class VentandaDePartdida_VDP extends javax.swing.JFrame {
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(layout.createSequentialGroup()
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jButton1)
-                            .add(jLabel2)
-                            .add(jButton4))
+                            .add(jbCrearParida)
+                            .add(jlimg1VDP)
+                            .add(jbRecords))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                 .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                                    .add(jButton2)
+                                    .add(jbEstadisticas)
                                     .add(145, 145, 145))
                                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                    .add(jLabel6)
-                                    .add(jLabel3)))
-                            .add(jButton5)))
-                    .add(jLabel5))
+                                    .add(jlimgVDP5)
+                                    .add(jlimgVDP2)))
+                            .add(jbMyprofile)))
+                    .add(jlimgVDP4))
                 .add(18, 18, 18)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(jButton3)
-                        .add(jButton6))
+                        .add(jbCargarPartida)
+                        .add(jbSalir))
                     .add(layout.createSequentialGroup()
                         .add(40, 40, 40)
-                        .add(jLabel4))
-                    .add(jLabel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 168, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(jlimgVDP3))
+                    .add(jlimgVDP6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 168, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jbCargarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCargarPartidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jbCargarPartidaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbCrearParidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCrearParidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbCrearParidaActionPerformed
 
     /**
     * @param args the command line arguments
@@ -172,19 +172,19 @@ public class VentandaDePartdida_VDP extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JButton jbCargarPartida;
+    private javax.swing.JButton jbCrearParida;
+    private javax.swing.JButton jbEstadisticas;
+    private javax.swing.JButton jbMyprofile;
+    private javax.swing.JButton jbRecords;
+    private javax.swing.JButton jbSalir;
     private javax.swing.JLabel jbTitulo;
+    private javax.swing.JLabel jlimg1VDP;
+    private javax.swing.JLabel jlimgVDP2;
+    private javax.swing.JLabel jlimgVDP3;
+    private javax.swing.JLabel jlimgVDP4;
+    private javax.swing.JLabel jlimgVDP5;
+    private javax.swing.JLabel jlimgVDP6;
     // End of variables declaration//GEN-END:variables
 
 }
