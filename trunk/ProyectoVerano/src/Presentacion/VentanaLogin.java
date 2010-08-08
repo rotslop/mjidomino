@@ -253,6 +253,7 @@ JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VA
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
 JOptionPane.showConfirmDialog(null, "Desea Salir del Sistema?","iDomino",JOptionPane.YES_NO_CANCEL_OPTION);//showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JOptionPane.ERROR_MESSAGE);
 
+
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosing
 

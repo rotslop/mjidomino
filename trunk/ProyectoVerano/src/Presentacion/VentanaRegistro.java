@@ -130,7 +130,7 @@ private Jcalendar fechanaci;
         jlSeleccioneImage.setForeground(new java.awt.Color(255, 255, 255));
         jlSeleccioneImage.setText("Seleccione Una Imagen:");
 
-        jbCancelar.setText("Cancel");
+        jbCancelar.setText("Cancelar");
 
         bgSeleccionarAvatar.add(jrbAvatar2);
         jrbAvatar2.setForeground(new java.awt.Color(255, 255, 255));
@@ -185,7 +185,7 @@ private Jcalendar fechanaci;
 
         jlTituloiDomino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/titulotext.png"))); // NOI18N
 
-        jbAceptar.setText("Acept");
+        jbAceptar.setText("Aceptar");
         jbAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbAceptarActionPerformed(evt);
