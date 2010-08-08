@@ -1,0 +1,9 @@
+package Dato;
+
+
+
+class ArchivoXml {
+
+
+
+}
