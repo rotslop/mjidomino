@@ -63,7 +63,6 @@ private Jcalendar fechanaci;
         jlAvatar6 = new javax.swing.JLabel();
         jlTituloiDomino = new javax.swing.JLabel();
         jbAceptar = new javax.swing.JButton();
-        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -190,161 +189,115 @@ private Jcalendar fechanaci;
             }
         });
 
-        dateChooserCombo1.setCurrentView(new datechooser.view.appearance.AppearancesList("Swing",
-            new datechooser.view.appearance.ViewAppearance("custom",
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(0, 0, 0),
-                    new java.awt.Color(0, 0, 255),
-                    false,
-                    true,
-                    new datechooser.view.appearance.swing.ButtonPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(0, 0, 0),
-                    new java.awt.Color(0, 0, 255),
-                    true,
-                    true,
-                    new datechooser.view.appearance.swing.ButtonPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(0, 0, 255),
-                    new java.awt.Color(0, 0, 255),
-                    false,
-                    true,
-                    new datechooser.view.appearance.swing.ButtonPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(128, 128, 128),
-                    new java.awt.Color(0, 0, 255),
-                    false,
-                    true,
-                    new datechooser.view.appearance.swing.LabelPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(0, 0, 0),
-                    new java.awt.Color(0, 0, 255),
-                    false,
-                    true,
-                    new datechooser.view.appearance.swing.LabelPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(0, 0, 0),
-                    new java.awt.Color(255, 0, 0),
-                    false,
-                    false,
-                    new datechooser.view.appearance.swing.ButtonPainter()),
-                (datechooser.view.BackRenderer)null,
-                false,
-                true)));
-    dateChooserCombo1.setLocale(new java.util.Locale("en", "MT", ""));
-
-    org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
-    getContentPane().setLayout(layout);
-    layout.setHorizontalGroup(
-        layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(layout.createSequentialGroup()
-            .add(30, 30, 30)
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(layout.createSequentialGroup()
-                    .add(jlRegistroNuevousuario)
-                    .add(125, 125, 125)
-                    .add(jlTituloiDomino))
+        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(layout.createSequentialGroup()
+                .add(30, 30, 30)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .add(jlRegistroNuevousuario)
+                        .add(125, 125, 125)
+                        .add(jlTituloiDomino))
+                    .add(jlSeleccioneImage)
+                    .add(layout.createSequentialGroup()
+                        .add(jrbAvatar1)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jlAvatar1)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jrbAvatar2)
+                        .add(2, 2, 2)
+                        .add(jlAvatar2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 90, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jrbAvatar3)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(jlAvatar3)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jRadioButton4)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jlAvatar4)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jRadioButton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jlAvatar5)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jRadioButton6)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jlAvatar6))
+                    .add(layout.createSequentialGroup()
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(jlNombre)
+                            .add(jlApellido)
+                            .add(jtfApellido)
+                            .add(jtfNombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 99, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(14, 14, 14)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jtfNickname, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(layout.createSequentialGroup()
+                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jlNickname, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 220, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(jlFechaDeNacimiento)
+                                    .add(layout.createSequentialGroup()
+                                        .add(42, 42, 42)
+                                        .add(jbAceptar)))
+                                .add(32, 32, 32)
+                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jbCancelar)
+                                    .add(jlClave)
+                                    .add(jpfPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 135, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .add(jlTituloiDomino, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(jlRegistroNuevousuario)
+                        .add(29, 29, 29)))
                 .add(jlSeleccioneImage)
-                .add(layout.createSequentialGroup()
-                    .add(jrbAvatar1)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                    .add(jlAvatar1)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                    .add(jrbAvatar2)
-                    .add(2, 2, 2)
-                    .add(jlAvatar2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 90, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                    .add(jrbAvatar3)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                    .add(jlAvatar3)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                    .add(jRadioButton4)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                    .add(jlAvatar4)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                    .add(jRadioButton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                    .add(jlAvatar5)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(18, 18, 18)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jRadioButton6)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                    .add(jRadioButton5)
+                    .add(jlAvatar4)
+                    .add(jlAvatar5)
+                    .add(jlAvatar2)
+                    .add(jlAvatar1)
+                    .add(jrbAvatar1)
+                    .add(jrbAvatar2)
+                    .add(jlAvatar3)
+                    .add(jrbAvatar3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jRadioButton4)
                     .add(jlAvatar6))
-                .add(layout.createSequentialGroup()
-                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                        .add(jlNombre)
-                        .add(jlApellido)
-                        .add(jtfApellido)
-                        .add(jtfNombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 99, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(14, 14, 14)
-                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(dateChooserCombo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(jtfNickname, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(layout.createSequentialGroup()
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                .add(jlNickname, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 220, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(jlFechaDeNacimiento)
-                                .add(layout.createSequentialGroup()
-                                    .add(42, 42, 42)
-                                    .add(jbAceptar)))
-                            .add(32, 32, 32)
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                .add(jbCancelar)
-                                .add(jlClave)
-                                .add(jpfPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 135, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
-            .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-    );
-    layout.setVerticalGroup(
-        layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(layout.createSequentialGroup()
-                    .add(jlTituloiDomino, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 92, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap()
-                    .add(jlRegistroNuevousuario)
-                    .add(29, 29, 29)))
-            .add(jlSeleccioneImage)
-            .add(18, 18, 18)
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(jRadioButton6)
-                .add(jRadioButton5)
-                .add(jlAvatar4)
-                .add(jlAvatar5)
-                .add(jlAvatar2)
-                .add(jlAvatar1)
-                .add(jrbAvatar1)
-                .add(jrbAvatar2)
-                .add(jlAvatar3)
-                .add(jrbAvatar3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(jRadioButton4)
-                .add(jlAvatar6))
-            .add(42, 42, 42)
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                .add(jlNickname)
-                .add(jlNombre)
-                .add(jlClave))
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                .add(jtfNombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(jtfNickname, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(jpfPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .add(45, 45, 45)
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                .add(jlApellido)
-                .add(jlFechaDeNacimiento))
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(42, 42, 42)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jlNickname)
+                    .add(jlNombre)
+                    .add(jlClave))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jtfNombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jtfNickname, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jpfPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(45, 45, 45)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jlApellido)
+                    .add(jlFechaDeNacimiento))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jtfApellido, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(dateChooserCombo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .add(53, 53, 53)
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                .add(jbCancelar)
-                .add(jbAceptar))
-            .add(261, 261, 261))
-    );
+                .add(53, 53, 53)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jbCancelar)
+                    .add(jbAceptar))
+                .add(261, 261, 261))
+        );
 
-    pack();
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtfNicknameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNicknameActionPerformed
@@ -418,7 +371,6 @@ private Jcalendar fechanaci;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bgSeleccionarAvatar;
-    private datechooser.beans.DateChooserCombo dateChooserCombo1;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
