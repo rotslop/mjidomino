@@ -1,6 +1,6 @@
 
 package Dato;
-
+import ve.edu.ucab.cliente.ClienteSocket;
 
 public class Usuario {
 
@@ -87,4 +87,13 @@ public class Usuario {
     public void AccedePartida (Usuario U){
 
     }
+
+public static void ComunicacionClienteServidor (){
+    
+ClienteSocket cliente = new ClienteSocket();
+String resultado = cliente.ejecutarPeticion("1:gerardo", "localhost",7687);
+System.out.println(resultado);
+
 }
+}
+
