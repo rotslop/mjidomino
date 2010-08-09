@@ -12,6 +12,22 @@ package Dato;
 public class ListaFicha {
 private int fichaServidor[];
 
+    public ListaFicha(int[] fichaServidor) {
+        this.fichaServidor = fichaServidor;
+    }
+
+    public int[] getFichaServidor() {
+        return fichaServidor;
+    }
+
+    public void setFichaServidor(int[] fichaServidor) {
+        this.fichaServidor = fichaServidor;
+    }
+
+
+
+
+
 
 
 }
