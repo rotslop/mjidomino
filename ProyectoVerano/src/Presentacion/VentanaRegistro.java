@@ -382,6 +382,7 @@ JOptionPane.showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JO
 
     Presentacion.VentanaLogin ventana = new Presentacion.VentanaLogin();
     ventana.VentanaPadre();
+    jDateChooser1.getDate().toString();
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosed
 
