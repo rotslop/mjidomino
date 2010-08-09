@@ -149,7 +149,7 @@ private Jcalendar fechanaci;
                                     .add(jpwPassword, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE))
                                 .add(55, 55, 55))
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 57, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 89, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(jbAceptar)
                                 .add(47, 47, 47)
                                 .add(jbLimpiar))))
@@ -182,7 +182,7 @@ private Jcalendar fechanaci;
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jlUsuarioNuevo)
                     .add(jbRegistrar))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
         pack();
