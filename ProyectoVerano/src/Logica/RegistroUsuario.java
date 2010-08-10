@@ -5,8 +5,7 @@
 
 package Logica;
 
-import Dato.ListaUsuario;
-import Dato.Usuario;
+import Dato.*;
 import javax.swing.JTextField;
 /**
  *
@@ -19,6 +18,7 @@ public class RegistroUsuario {
 
       public static boolean inicializarEstructuras(){
         ListaUsuariosRegistrados = new ListaUsuario();
+
 
 //        ListaUsuariosRegistrados.agregarElemento(new Usuario("Ricardonick", "Casanova", "Profesor"));
 //        ListaUsuariosRegistrados.agregarElemento(new Usuario("Glorianick", "Tarrio", "Coordinadora"));
