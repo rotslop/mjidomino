@@ -25,9 +25,15 @@ private Jcalendar fechanaci;
     /** Creates new form VentanaRegistro */
     public VentanaRegistro() {
         initComponents();
+        ventanaPadre = null;
    
 
     }
+
+    public void setVentanaPadre(JFrame ventanaPadre) {
+        this.ventanaPadre = ventanaPadre;
+    }
+
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -380,8 +386,8 @@ JOptionPane.showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JO
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
 
-    Presentacion.VentanaLogin ventana = new Presentacion.VentanaLogin();
-    ventana.VentanaPadre();
+    ventanaPadre.setVisible(true);
+    this.dispose();
     jDateChooser1.getDate().toString();
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosed
@@ -422,4 +428,5 @@ JOptionPane.showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JO
     private javax.swing.JTextField jtfNombre;
     // End of variables declaration//GEN-END:variables
 
+    JFrame ventanaPadre;
 }

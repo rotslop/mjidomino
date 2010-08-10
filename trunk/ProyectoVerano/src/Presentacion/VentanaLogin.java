@@ -195,7 +195,9 @@ private Jcalendar fechanaci;
 
     }
     private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
-        new VentanaRegistro().setVisible(true);
+        VentanaRegistro ventana = new VentanaRegistro();
+        ventana.setVisible(true);
+        ventana.setVentanaPadre(this);
         this.setVisible(false);
         
 
