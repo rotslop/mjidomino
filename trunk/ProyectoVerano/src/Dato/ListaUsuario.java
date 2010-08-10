@@ -31,7 +31,10 @@ public class ListaUsuario
         UsuariosRegistrados = new TreeSet(ComparadorNick);
     }
 
-
+   public Iterator getIterator()
+    {
+        return UsuariosRegistrados.iterator();
+    }
     /**
      *
      * Método public void imprimirColeccion(): Este método imprime el
