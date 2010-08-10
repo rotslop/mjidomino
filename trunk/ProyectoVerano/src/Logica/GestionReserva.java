@@ -10,7 +10,7 @@ import ve.edu.ucab.server.logica.LogicaServidor;
  *
  * @author Minerva Verdugo Ruiz
  */
-public class GestionReserva {
+
 
 public class GestionReserva implements LogicaServidor {
 
@@ -29,4 +29,4 @@ System.out.println("La reserva " + reserva.getNombre() + " se ha efectuado");
 return resultado;
 }
 }
-}
+
