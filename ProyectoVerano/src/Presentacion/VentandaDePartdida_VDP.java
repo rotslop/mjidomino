@@ -44,7 +44,7 @@ public class VentandaDePartdida_VDP extends javax.swing.JFrame {
         jlimgVDP6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(204, 204, 204));
 
         jbTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/titulotext.png"))); // NOI18N
 

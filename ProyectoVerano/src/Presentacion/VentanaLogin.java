@@ -17,6 +17,7 @@ import Presentacion.VentanaLogin;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.JOptionPane;
+import Logica.Comunicacion;
 /**
  *
  * @author Isra
@@ -59,7 +60,7 @@ private Jcalendar fechanaci;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Soy lo mejor del mundo");
-        setBackground(new java.awt.Color(1, 1, 1));
+        setBackground(new java.awt.Color(204, 204, 204));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
@@ -69,10 +70,8 @@ private Jcalendar fechanaci;
             }
         });
 
-        jlUsername.setForeground(new java.awt.Color(255, 255, 255));
         jlUsername.setText("Username: ");
 
-        jlPassword.setForeground(new java.awt.Color(255, 255, 255));
         jlPassword.setText("Password:");
 
         jpwPassword.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -111,10 +110,8 @@ private Jcalendar fechanaci;
             }
         });
 
-        jlBienvenidoAiDomino.setForeground(new java.awt.Color(255, 255, 255));
         jlBienvenidoAiDomino.setText("Bienvenido A iDomino");
 
-        jlUsuarioNuevo.setForeground(new java.awt.Color(255, 255, 255));
         jlUsuarioNuevo.setText("Usuario Nuevo? Resgistrate!!!");
 
         jbRegistrar.setText("Registrar");
@@ -255,7 +252,7 @@ JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VA
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
 JOptionPane.showConfirmDialog(null, "Desea Salir del Sistema?","iDomino",JOptionPane.YES_NO_CANCEL_OPTION);//showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JOptionPane.ERROR_MESSAGE);
-
+Comunicacion.solicitarGuardarArchivo();
 
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosing

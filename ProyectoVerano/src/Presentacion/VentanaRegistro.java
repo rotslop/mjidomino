@@ -75,17 +75,15 @@ private Jcalendar fechanaci;
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(204, 204, 204));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
             }
         });
 
-        jlRegistroNuevousuario.setForeground(new java.awt.Color(255, 255, 255));
         jlRegistroNuevousuario.setText("Registro Nuevo Usuario");
 
-        jlNickname.setForeground(new java.awt.Color(255, 255, 255));
         jlNickname.setText("NickName (Nombre de Usuario): ");
 
         jtfNickname.addActionListener(new java.awt.event.ActionListener() {
@@ -95,7 +93,6 @@ private Jcalendar fechanaci;
         });
 
         jlNombre.setBackground(new java.awt.Color(204, 255, 204));
-        jlNombre.setForeground(new java.awt.Color(255, 255, 255));
         jlNombre.setText("Nombre");
 
         jtfNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +101,6 @@ private Jcalendar fechanaci;
             }
         });
 
-        jlApellido.setForeground(new java.awt.Color(255, 255, 255));
         jlApellido.setText("Apellido");
 
         jtfApellido.addActionListener(new java.awt.event.ActionListener() {
@@ -113,10 +109,8 @@ private Jcalendar fechanaci;
             }
         });
 
-        jlFechaDeNacimiento.setForeground(new java.awt.Color(255, 255, 255));
         jlFechaDeNacimiento.setText("Fecha de Nacimiento");
 
-        jlClave.setForeground(new java.awt.Color(255, 255, 255));
         jlClave.setText("Password( Clave): ");
 
         jpfPassword.addActionListener(new java.awt.event.ActionListener() {
@@ -134,10 +128,14 @@ private Jcalendar fechanaci;
         });
 
         jlSeleccioneImage.setBackground(new java.awt.Color(0, 255, 255));
-        jlSeleccioneImage.setForeground(new java.awt.Color(255, 255, 255));
         jlSeleccioneImage.setText("Seleccione Una Imagen:");
 
         jbCancelar.setText("Cancelar");
+        jbCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCancelarActionPerformed(evt);
+            }
+        });
 
         bgSeleccionarAvatar.add(jrbAvatar2);
         jrbAvatar2.setForeground(new java.awt.Color(255, 255, 255));
@@ -368,13 +366,18 @@ private Jcalendar fechanaci;
            JOptionPane.showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JOptionPane.ERROR_MESSAGE);
 
         }// TODO add your handling code here:
-    Comunicacion.agregarUsuario(jtfNickname.getText(),jpfPassword.getText(), jtfNombre.getText(), jtfApellido.getText(), avatar);
+    
+if (!(jtfNombre.getText().toString().isEmpty()|| jtfApellido.getText().toString().isEmpty()|| jpfPassword.getText().toString().isEmpty())){
+    if(Comunicacion.agregarUsuario(jtfNickname.getText(),jpfPassword.getText(), jtfNombre.getText(), jtfApellido.getText(), avatar)==false){
 
+        JOptionPane.showMessageDialog(null, "El Nombre de Usuario Ya Existe", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+ else {
     ventanaPadre.setVisible(true);
     this.dispose();
-        
-        
-
+    }
+    
+        }
         //fechanaci = J
     }//GEN-LAST:event_jbAceptarActionPerformed
 
@@ -388,10 +391,15 @@ private Jcalendar fechanaci;
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
 
-    ventanaPadre.setVisible(true);
+    //ventanaPadre.setVisible(true);
     this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosed
+
+    private void jbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarActionPerformed
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbCancelarActionPerformed
 
     /**
     * @param args the command line arguments
