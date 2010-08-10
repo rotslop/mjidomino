@@ -368,8 +368,10 @@ private Jcalendar fechanaci;
            JOptionPane.showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JOptionPane.ERROR_MESSAGE);
 
         }// TODO add your handling code here:
-       Comunicacion.agregarUsuario(jtfNickname.getText().toString(),jpfPassword.getPassword().toString(), jtfNombre.getText(), jtfApellido.getText(), avatar);
-        
+    Comunicacion.agregarUsuario(jtfNickname.getText(),jpfPassword.getText(), jtfNombre.getText(), jtfApellido.getText(), avatar);
+
+    ventanaPadre.setVisible(true);
+    this.dispose();
         
         
 
