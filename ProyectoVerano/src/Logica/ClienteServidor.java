@@ -17,27 +17,27 @@ public class ClienteServidor  {
     {
 
     }
-        public void CreaPartida (int PM)
+        public void CreaPartida (String nickname, String fechaCreacionPartida)
     {
 
     }
 
 
-       public void RegistroUsuario(int PM)
+       public void RegistroUsuario(String nickname,String clave,String nombre,String apellido,String fechaNacimiento,String IDAvatar)
     {
 
     }
 
-        public void GuardaPartida(int PM)
+        public void GuardaPartida(String nickname, String clave,String nombre,String apellido,String fechaNacimiento,String IDAvatar)
     {
 
         }
-        public void EnviaJugada(int PM)
+        public void EnviaJugada(String nickname,String idPartida,String jugadarealizada)
 
     {
 
         }
-        public void FinPartida(int PM)
+        public void FinPartida(String nickname, String idPartida)
     {
 
     }
@@ -53,18 +53,19 @@ public class ClienteServidor  {
         break;
         case 2:
 
-        CreaPartida (nickname,fechaCreacionPartida);
+        respuesta.CreaPartida(nickname, fechaCreacionPartida);
         break;
         case 3:
 
-        RegistroUsuario R= new RegistroUsuario();
-        RegistroUsuario(PM);
+        // RegistroUsuario R= new RegistroUsuario();
+        RegistroUsuario(nickname,clave,nombre,apellido,fechaNacimiento,IDAvatar);
         //R.ValidarRegistro(U);
         break;
         case 4:
 
-        //GuardaPartida(nickname, clave,nombre,apellido,fechaNacimiento,IDAvatar);
+        GuardaPartida(nickname, clave,nombre,apellido,fechaNacimiento,IDAvatar);
         break;
+
         case 5:
         EnviaJugada(nickname,idPartida,jugadarealizada);
         break;
