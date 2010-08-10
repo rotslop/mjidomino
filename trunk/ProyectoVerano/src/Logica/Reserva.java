@@ -18,6 +18,11 @@ public class Reserva {
         this.Id = Id;
     }
 
+    public Reserva(){
+        this.Nombre= "";
+        this.Id=0;
+    }
+
     public int getId() {
         return Id;
     }
