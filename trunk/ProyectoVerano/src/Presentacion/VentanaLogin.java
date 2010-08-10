@@ -261,7 +261,7 @@ Comunicacion.solicitarGuardarArchivo();
         this.jtfUsername = jtfUsername;
     }
 
-    Usuario logear = new Usuario(nickname,clave,nombre,apellido, fechanaci,avatar);
+    Usuario logear = new Usuario(nickname,clave,"","", "","");
     /**
     * @param args the command line arguments
     */
