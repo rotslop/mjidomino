@@ -368,7 +368,7 @@ private Jcalendar fechanaci;
         }// TODO add your handling code here:
     
 if (!(jtfNombre.getText().toString().isEmpty()|| jtfApellido.getText().toString().isEmpty()|| jpfPassword.getText().toString().isEmpty())){
-    if(Comunicacion.agregarUsuario(jtfNickname.getText(),jpfPassword.getText(), jtfNombre.getText(), jtfApellido.getText(), avatar)==false){
+    if(Comunicacion.agregarUsuario(jtfNickname.getText(),jpfPassword.getText(), jtfNombre.getText(), jtfApellido.getText(),jDateChooser1.getDate().toString(), avatar)==false){
 
         JOptionPane.showMessageDialog(null, "El Nombre de Usuario Ya Existe", "Error", JOptionPane.ERROR_MESSAGE);
     }

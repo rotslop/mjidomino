@@ -24,9 +24,10 @@ public class Main {
         Comunicacion.solicitarInicializarEstruturas();
         Comunicacion.solicitarCargaArchivo();
         Comunicacion.ImprimirListaUsuario();
-        Comunicacion.solicitarGuardarArchivo();
+       
 
         new VentanaLogin().setVisible(true);
+         Comunicacion.solicitarGuardarArchivo();
     }
 
 }
