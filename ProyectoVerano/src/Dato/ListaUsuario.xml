@@ -8,8 +8,7 @@
         Purpose of the document follows.
 -->
 
-<root>
-
+<usuarios tipo="lista de usuarios">
 <Usuario>
 <Nombre>Minerva</Nombre>
 <Apellido>Verdugo</Apellido>
@@ -60,4 +59,4 @@
 
 </Usuario>
 
-</root>
+</usuarios>
