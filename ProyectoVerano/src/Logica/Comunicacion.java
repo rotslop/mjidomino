@@ -33,9 +33,9 @@ public class Comunicacion
        Datos.generarInstancia();
    }
 
-   public static boolean agregarUsuario(String nickname, String clave, String nombre, String apellido,String avatar)
+   public static boolean agregarUsuario(String nickname, String clave, String nombre, String apellido,String fechanaci,String avatar)
    {
-       Usuario elUsuario = new Usuario(nickname,clave,nombre,apellido,avatar);
+       Usuario elUsuario = new Usuario(nickname,clave,nombre,apellido,fechanaci,avatar);
        return(Datos.getListadoDeUsuario().AgregarElemento(elUsuario));
           }
     public static void ImprimirListaUsuario(){
