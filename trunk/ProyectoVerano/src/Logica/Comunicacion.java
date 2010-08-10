@@ -16,7 +16,7 @@ import Dato.Usuario;
 public class Comunicacion
 
 {
-
+// Todo Las Acciones que tienen que ver con Usuario
 
    public static void solicitarCargaArchivo()
    {
@@ -33,16 +33,15 @@ public class Comunicacion
        Datos.generarInstancia();
    }
 
-   public static void agregarUsuario(String nickname, String clave, String nombre, String apellido,String avatar)
+   public static boolean agregarUsuario(String nickname, String clave, String nombre, String apellido,String avatar)
    {
        Usuario elUsuario = new Usuario(nickname,clave,nombre,apellido,avatar);
-
-       Datos.getListadoDeUsuario().AgregarElemento(elUsuario);
-   }
-    public static void ImprimirLista(){
+       return(Datos.getListadoDeUsuario().AgregarElemento(elUsuario));
+          }
+    public static void ImprimirListaUsuario(){
         Datos.ImprimirLista();
     }
-       
+// </Todo Las Acciones que tienen que ver con Usuario>
        
        
    }
