@@ -13,14 +13,14 @@ import java.util.Calendar;
 public class Partida {
 
 private String nickname;
-private int ID;
+private String ID;
 private Jcalendar fechaactual;
 private Jcalendar fechainicio;
 private ListaFicha listaservidor[];
 private ListaFicha listausuario[];
 private ListaFicha listapote[];
 
-    public Partida(String nickname, int ID, Jcalendar fechaactual, Jcalendar fechainicio, ListaFicha[] listaservidor, ListaFicha[] listausuario, ListaFicha[] listapote) {
+    public Partida(String nickname, String ID, Jcalendar fechaactual, Jcalendar fechainicio, ListaFicha[] listaservidor, ListaFicha[] listausuario, ListaFicha[] listapote) {
         this.nickname = nickname;
         this.ID = ID;
         this.fechaactual = fechaactual;
@@ -30,11 +30,11 @@ private ListaFicha listapote[];
         this.listapote = listapote;
     }
 
-    public int getID() {
+    public String getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
