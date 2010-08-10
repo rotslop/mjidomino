@@ -10,43 +10,10 @@ package Logica;
  * @author Minerva Verdugo Ruiz
  */
 public class ClienteServidor  {
-    Reserva reserva;
+ 
 
-
-    public void ClienteServidor(int PM){
-    switch (PM){
-
-        case 1:
-        IngresoSistema(PM);
-        break;
-        case 2:
-        CreaPartida (PM);
-        break;
-        case 3:
-        RegistroUsuario R= new RegistroUsuario();
-        RegistroUsuario(PM);
-        //R.ValidarRegistro(U);
-        break;
-        case 4:
-        //GuardaPartida(PM);
-        break;
-        case 5:
-        EnviaJugada(PM);
-        break;
-        case 6:
-        FinPartida(PM);
-        break;
-
-    }
-
-    }
-
-
-
-
-
-
-    public void IngresoSistema(int PM)
+    
+  public void IngresoSistema(String nickname, String ClaveAcceso)
     {
 
     }
@@ -74,4 +41,45 @@ public class ClienteServidor  {
     {
 
     }
+
+    public void ClienteServidor(int PM){
+
+           ClienteServidor respuesta;
+        switch (PM){
+
+        case 1:
+
+        respuesta.IngresoSistema(nickname,ClaveAcceso);
+        break;
+        case 2:
+
+        CreaPartida (nickname,fechaCreacionPartida);
+        break;
+        case 3:
+
+        RegistroUsuario R= new RegistroUsuario();
+        RegistroUsuario(PM);
+        //R.ValidarRegistro(U);
+        break;
+        case 4:
+
+        //GuardaPartida(nickname, clave,nombre,apellido,fechaNacimiento,IDAvatar);
+        break;
+        case 5:
+        EnviaJugada(nickname,idPartida,jugadarealizada);
+        break;
+        case 6:
+        FinPartida(nickname, idPartida);
+        break;
+
+    }
+
+    }
+
+
+
+
+
+
+  
 }
