@@ -12,6 +12,7 @@ import org.jdom.output.*;
 public class ArchivoXml{
 
     private static String nombreArchivo = "src/Dato/ListaUsuario.xml";
+    private static String nombreArchivoPartida = "src/Dato/ListaPartida.xml";
 
     /**
      *
@@ -147,76 +148,54 @@ public class ArchivoXml{
             e.printStackTrace();
         }
     }
+
+
+    // Empieza La de la Partida
+public static void leerArchivoXML(ListaPartida listaDePartidas)
+    {
+        try
+        {
+            SAXBuilder builder = new SAXBuilder();
+
+            /* Se crea un documento nuevo con el nombre del archivo */
+            Document doc = builder.build(nombreArchivoPartida);
+
+            /* Se obtiene la raíz del archivo (la etiqueta inicial) */
+            Element raiz = doc.getRootElement();
+
+            /* Se puede obtener el atributo de la raíz (de la etiqueta) */
+            System.out.println(raiz.getAttributeValue("tipo"));
+
+            /* Se obtienen todos los hijos cuya etiqueta esa "usuario"  */
+            /* y se asignan esos hijos a un List                        */
+            List listaPartida= raiz.getChildren("partida");
+
+            System.out.println("Formada por:" + listaPartida.size() + " usuarios");
+            System.out.println("------------------");
+
+            /* Se genera un iterador para recorrer el List que se generó */
+            Iterator i = listaPartida.iterator();
+
+            /* Se recorre el List */
+            while (i.hasNext())
+            {
+                /* Se obtiene cada uno y se asigna a un objeto de tipo Element */
+                Element e = (Element) i.next();
+
+                /* Se obtiene el nombre, apellido y cargo de cada una de las etiquetas  */
+                /* hijas de usuario, es decir, nombre, apellido y cargo                 */
+                Element nick = e.getChild("nick");
+                Element ID = e.getChild("ID");
+                Element fechaactual = e.getChild("fechaacual");
+                Element fechainicio = e.getChild("fechainicio");
+                 /* Se crea un nodo nuevo con la información y se agrega a la lista de usuarios */
+                Partida laPartida = new Partida(nick.getText(), ID.getText(),fechaactual.getText(),fechainicio.getText());
+                listaDePartidas.AgregarElemento(laPartida);
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 }
-
-
-//public static boolean CargarXml(ListaUsuario ListaUsuariosRegistrados){
-//    try {
-//            SAXBuilder builder=new SAXBuilder(false);
-//            Document doc = (Document) builder.build("ListaUsuario.xml");
-//            Element raiz = doc.getRootElement();
-//            List servicios = raiz.getChildren("Usuario");
-//            Iterator i = servicios.iterator();
-//
-//           while (i.hasNext()){
-//                Element e= (Element)i.next();
-//                Element Nombre = e.getChild("Nombre");
-//                Element Apellido = e.getChild("Apellido");
-//                Element Fechanacimiento = e.getChild("fechanacimiento");
-//                Element clave = e.getChild("Clave");
-//                Element nickname= e.getChild("nickname");
-//                Usuario Aux= new Usuario(Nombre.getValue(),Apellido.getValue(),Fechanacimiento.getValue(),clave.getValue(),nickname.getValue());
-//                ListaUsuariosRegistrados.AgregarElemento(Aux);
-//
-//                System.out.println("Datos del Usuario: Nombre "+ Nombre.getValue().toString()+
-//                " Apellido: "+Apellido.getValue().toString()+" Fechanacimiento: "+Fechanacimiento.getValue().toString()+
-//                "Clave: "+ clave.getValue().toString()+ "nickname: "+ nickname.getValue().toString());
-//
-//                return(true);
-//           }
-//        }catch (Exception e){
-//         e.printStackTrace();
-//       }
-//   return(false);
-//}
-//}
-//
-////}
-////Vector <Usuario> lecturaXmlUsuario()
-////    {
-////            Vector <Usuario> VUsuario= new Vector();
-////        try {
-////            SAXBuilder builder=new SAXBuilder(false);
-////            Document doc = (Document) builder.build("ListaUsuario.xml");
-////            Element raiz = doc.getRootElement();
-////            List servicios = raiz.getChildren("Usuario");
-////            Iterator i = servicios.iterator();
-////
-////           while (i.hasNext()){
-////                Element e= (Element)i.next();
-////                Element Nombre = e.getChild("Nombre");
-////                Element Apellido = e.getChild("Apellido");
-////                Element Fechanacimiento = e.getChild("fechanacimiento");
-////                Element clave = e.getChild("Clave");
-////                Element nickname= e.getChild("nickname");
-////                Usuario Aux= new Usuario(Nombre.getValue(),Apellido.getValue(),Fechanacimiento.getValue(),clave.getValue(),nickname.getValue());
-////                VUsuario.addElement(Aux);
-////
-////
-////                System.out.println("Datos del Usuario: Nombre "+ Nombre.getValue().toString()+
-////                " Apellido: "+Apellido.getValue().toString()+" Fechanacimiento: "+Fechanacimiento.getValue().toString()+
-////                "Clave: "+ clave.getValue().toString()+ "nickname: "+ nickname.getValue().toString());
-////
-////           }
-////        }catch (Exception e){
-////         e.printStackTrace();
-////       }
-////
-////
-////            return VUsuario;
-////   }
-//
-//
-//
-//
-//

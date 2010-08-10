@@ -10,6 +10,7 @@ public class Usuario {
     private String apellido;
     private Jcalendar fechanaci;
     private String avatar;
+    private int Score;
 
     public Usuario(String nickname, String clave, String nombre, String apellido, Jcalendar fechanaci,String avatar) {
         this.nickname = nickname;
