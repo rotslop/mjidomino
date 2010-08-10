@@ -11,18 +11,23 @@ import java.util.Calendar;
  * @author Minerva Verdugo Ruiz
  */
 public class Partida {
+
+private String nickname;
 private int ID;
-private Usuario elusuario;
-private int numpartida;
-private boolean partidaganada;
+private Jcalendar fechaactual;
+private Jcalendar fechainicio;
+private ListaFicha listaservidor[];
+private ListaFicha listausuario[];
+private ListaFicha listapote[];
 
-
-
-    public Partida(int ID, Usuario elusuario, int numpartida, boolean partidaganada) {
+    public Partida(String nickname, int ID, Jcalendar fechaactual, Jcalendar fechainicio, ListaFicha[] listaservidor, ListaFicha[] listausuario, ListaFicha[] listapote) {
+        this.nickname = nickname;
         this.ID = ID;
-        this.elusuario = elusuario;
-        this.numpartida = numpartida;
-        this.partidaganada = partidaganada;
+        this.fechaactual = fechaactual;
+        this.fechainicio = fechainicio;
+        this.listaservidor = listaservidor;
+        this.listausuario = listausuario;
+        this.listapote = listapote;
     }
 
     public int getID() {
@@ -33,61 +38,56 @@ private boolean partidaganada;
         this.ID = ID;
     }
 
-    public Usuario getElusuario() {
-        return elusuario;
+    public Jcalendar getFechaactual() {
+        return fechaactual;
     }
 
-    public void setElusuario(Usuario elusuario) {
-        this.elusuario = elusuario;
+    public void setFechaactual(Jcalendar fechaactual) {
+        this.fechaactual = fechaactual;
     }
 
-    public int getNumpartida() {
-        return numpartida;
+    public Jcalendar getFechainicio() {
+        return fechainicio;
     }
 
-    public void setNumpartida(int numpartida) {
-        this.numpartida = numpartida;
+    public void setFechainicio(Jcalendar fechainicio) {
+        this.fechainicio = fechainicio;
     }
 
-    public boolean isPartidaganada() {
-        return partidaganada;
+    public ListaFicha[] getListapote() {
+        return listapote;
     }
 
-    public void setPartidaganada(boolean partidaganada) {
-        this.partidaganada = partidaganada;
+    public void setListapote(ListaFicha[] listapote) {
+        this.listapote = listapote;
+    }
+
+    public ListaFicha[] getListaservidor() {
+        return listaservidor;
+    }
+
+    public void setListaservidor(ListaFicha[] listaservidor) {
+        this.listaservidor = listaservidor;
+    }
+
+    public ListaFicha[] getListausuario() {
+        return listausuario;
+    }
+
+    public void setListausuario(ListaFicha[] listausuario) {
+        this.listausuario = listausuario;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
 
 
-    public void ValidarPartida (Usuario U){ //Valida si el usuario escribio correctamente sus datos
-
-    }
-
-    public void CrearPartida (Usuario U){
-
-    }
-
-    public void GuardaPartida (Usuario U){// solo guarda una partida
-
-    }
-//
-//
-//    public void FechaInicioPartida (){
-////      Calendar.getAvailableLocales (Calendar.YEAR);
-//
-//     java.util.Date fecha = new Date();
-//     System.out.println (fecha);
-//    }
-
-
-//    public boolean PartidaTerminada(Usuario U)
-//    {
-//        boolean Registrado;
-//
-//
-//
-////
-////        return Registrado;
-////    }
-//}
+    
+   //}
 }
