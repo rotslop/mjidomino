@@ -23,10 +23,7 @@ public class Main {
 
         Comunicacion.solicitarInicializarEstruturas();
         Comunicacion.solicitarCargaArchivo();
-        Comunicacion.ImprimirLista();
-
-        Comunicacion.agregarUsuario("nickname2","clave1","nombre1","apellido1","avatar1");
-        Comunicacion.ImprimirLista();
+        Comunicacion.ImprimirListaUsuario();
         Comunicacion.solicitarGuardarArchivo();
 
         new VentanaLogin().setVisible(true);

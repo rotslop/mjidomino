@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package Logica;
+package Dato;
 import Dato.Usuario;
 import java.util.Calendar;
 /**
