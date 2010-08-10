@@ -5,8 +5,6 @@
 
 package Dato;
 
-import Logica.Partida;
-
 /**
  *
  * @author Minerva Verdugo Ruiz
