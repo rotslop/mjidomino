@@ -8,11 +8,11 @@ public class Usuario {
     private String clave;
     private String nombre;
     private String apellido;
-    private Jcalendar fechanaci;
+    private String fechanaci;
     private String avatar;
     private int Score;
 
-    public Usuario(String nickname, String clave, String nombre, String apellido, Jcalendar fechanaci,String avatar) {
+    public Usuario(String nickname, String clave, String nombre, String apellido, String fechanaci,String avatar) {
         this.nickname = nickname;
         this.clave = clave;
         this.nombre = nombre;
@@ -53,11 +53,11 @@ public class Usuario {
         this.clave = clave;
     }
 
-    public Jcalendar getFechanaci() {
+    public String getFechanaci() {
         return fechanaci;
     }
 
-    public void setFechanaci(Jcalendar fechanaci) {
+    public void setFechanaci(String fechanaci) {
         this.fechanaci = fechanaci;
     }
 
