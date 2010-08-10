@@ -88,12 +88,6 @@ public class Usuario {
 
     }
 
-public static void ComunicacionClienteServidor (){
-    
-ClienteSocket cliente = new ClienteSocket();
-String resultado = cliente.ejecutarPeticion("1:gerardo", "localhost",7687);
-System.out.println(resultado);
 
-}
 }
 

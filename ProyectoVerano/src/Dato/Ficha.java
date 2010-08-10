@@ -5,6 +5,8 @@
 
 package Dato;
 import java.util.*;
+import java.util.Vector;
+import java.util.Collections;
 /**
  *
  * @author Minerva Verdugo Ruiz
@@ -50,10 +52,13 @@ for(int j=i;j<7;j++){
 Ficha Aux= new Ficha(i,j);
 Fichas.addElement(Aux);
 
-}
-}
+    }
+
+     }
 return Fichas;
 }
+
+//System.out.println(" " + Aux);
 
 }
 
