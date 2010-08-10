@@ -39,6 +39,7 @@ public class VentanRecord extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setPreferredSize(new java.awt.Dimension(900, 700));
 
         jlTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/titulotext.png"))); // NOI18N
 
@@ -66,18 +67,18 @@ public class VentanRecord extends javax.swing.JFrame {
             .add(layout.createSequentialGroup()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(layout.createSequentialGroup()
-                        .addContainerGap(32, Short.MAX_VALUE)
+                        .addContainerGap(64, Short.MAX_VALUE)
                         .add(jlTitulo))
                     .add(layout.createSequentialGroup()
                         .add(156, 156, 156)
                         .add(jlimg1)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jcpTablaDatos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 443, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(305, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
             .add(layout.createSequentialGroup()
                 .add(482, 482, 482)
                 .add(jbVolver)
-                .addContainerGap(543, Short.MAX_VALUE))
+                .addContainerGap(335, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
