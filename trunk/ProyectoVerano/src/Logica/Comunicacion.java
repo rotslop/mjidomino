@@ -20,8 +20,13 @@ public class Comunicacion
 
    public static void solicitarCargaArchivo()
    {
-       ArchivoXml.CargarXml(Datos.getListadoDeUsuario());
-   }
+       ArchivoXml.leerArchivoXML(Datos.getListadoDeUsuario());
+    }
+    public static void solicitarGuardarArchivo()
+   {
+       ArchivoXml.guardarArchivoXML(Datos.getListadoDeUsuario());
+
+    }
 
    public static void solicitarInicializarEstruturas()
    {

@@ -92,23 +92,29 @@ public class ArchivoXml{
             /* Se crea la etiqueta "usuario" */
             Element usuarios = new Element("usuario");
 
-            nodoAuxiliar = (Nodo) iterador.next();
+            nodoAuxiliar = (Usuario) iterador.next();
 
             /* Se crean las etiquetas nombre, apellido y cargo */
+            Element nick = new Element("nick");
+            Element clave = new Element("clave");
             Element nombre = new Element("nombre");
             Element apellido = new Element("apellido");
-            Element cargo = new Element("cargo");
+            Element avatar = new Element("avatar");
 
             /* Se inicializa cada etiqueta con sus valores de la lista */
+            nick.setText(nodoAuxiliar.getNickname());
+            clave.setText(nodoAuxiliar.getClave());
             nombre.setText(nodoAuxiliar.getNombre());
             apellido.setText(nodoAuxiliar.getApellido());
-            cargo.setText(nodoAuxiliar.getCargo());
+            avatar.setText(nodoAuxiliar.getAvatar());
 
             /* Se añaden las etiquetas a la etiqueta principal (usuario)    */
             /* estableciendo que un usuario tiene nombre, apellido y cargo  */
+            usuarios.addContent(nick);
+            usuarios.addContent(clave);
             usuarios.addContent(nombre);
             usuarios.addContent(apellido);
-            usuarios.addContent(cargo);
+            usuarios.addContent(avatar);
 
             /* Se añade el nuevo usuario a la estructura XML */
             root.addContent(usuarios);
@@ -143,7 +149,6 @@ public class ArchivoXml{
     }
 }
 
-}
 
 //public static boolean CargarXml(ListaUsuario ListaUsuariosRegistrados){
 //    try {
