@@ -210,10 +210,10 @@ JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VA
 
         }
  else{
-     if(Comunicacion.LogearUsuario(jtfUsername.getText(),jpwPassword.getText(), "", "","","")==false){
-     new VentanRecord().setVisible(true);
+     if(Comunicacion.LogearUsuario(jtfUsername.getText(),jpwPassword.getPassword().toString(), "", "","","")==false){
+    System.out.println("Mamaste");
      }
- else{
+ else {
      new VentandaDePartdida_VDP().setVisible(true);
  }
             //new VentandaDePartdida_VDP().setVisible(true);
