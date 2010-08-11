@@ -162,7 +162,8 @@ public class ListaUsuario
              */
             //if (objeto.equals(auxiliar))
             if ((objeto.getNickname().contentEquals(auxiliar.getNickname()))&&(objeto.getClave().contentEquals(auxiliar.getClave())))
-                encontrado = true;
+                return true;
+
         }
         return false;
     }
