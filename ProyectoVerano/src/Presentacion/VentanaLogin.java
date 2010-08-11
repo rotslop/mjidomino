@@ -213,7 +213,9 @@ JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VA
      if(Comunicacion.agregarUsuario(jtfUsername.getText(),jpwPassword.getText(), "", "","","")==false){
      new VentanRecord().setVisible(true);
      }
-            
+ else{
+     new VentandaDePartdida_VDP().setVisible(true);
+ }
             //new VentandaDePartdida_VDP().setVisible(true);
           //  nickname =jtfUsername.getText();
         //clave = jpwPassword.getText();
@@ -222,6 +224,7 @@ JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VA
         //fechanaci = J
         //avatar= "";
     }//GEN-LAST:event_jbAceptarActionPerformed
+
     }
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
 
