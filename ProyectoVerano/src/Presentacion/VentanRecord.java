@@ -10,7 +10,7 @@
  */
 
 package Presentacion;
-
+import javax.swing.JFrame;
 /**
  *
  * @author Isra
@@ -20,8 +20,13 @@ public class VentanRecord extends javax.swing.JFrame {
     /** Creates new form VentanRecord */
     public VentanRecord() {
         initComponents();
+        ventanaPadre=null;
+        
     }
-
+        public void setVentanaPadre(JFrame ventanaPadre) {
+        this.ventanaPadre = ventanaPadre;
+    }
+    
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -39,7 +44,6 @@ public class VentanRecord extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(900, 700));
 
         jlTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/titulotext.png"))); // NOI18N
 
@@ -59,6 +63,11 @@ public class VentanRecord extends javax.swing.JFrame {
         jlimg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/trofeoVDP.png"))); // NOI18N
 
         jbVolver.setText("Volver");
+        jbVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbVolverActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,6 +109,12 @@ public class VentanRecord extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVolverActionPerformed
+this.dispose();
+ventanaPadre.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbVolverActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -112,5 +127,5 @@ public class VentanRecord extends javax.swing.JFrame {
     private javax.swing.JLabel jlTitulo;
     private javax.swing.JLabel jlimg1;
     // End of variables declaration//GEN-END:variables
-
+    JFrame ventanaPadre;
 }

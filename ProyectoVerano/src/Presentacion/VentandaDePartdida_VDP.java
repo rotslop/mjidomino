@@ -10,7 +10,7 @@
  */
 
 package Presentacion;
-
+import javax.swing.JFrame;
 /**
  *
  * @author Isra
@@ -20,8 +20,11 @@ public class VentandaDePartdida_VDP extends javax.swing.JFrame {
     /** Creates new form VentandaDePartdida_VDP */
     public VentandaDePartdida_VDP() {
         initComponents();
+        ventanaPadre= null;
     }
-
+ public void setVentanaPadre(JFrame ventanaPadre) {
+        this.ventanaPadre = ventanaPadre;
+    }
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -80,6 +83,11 @@ public class VentandaDePartdida_VDP extends javax.swing.JFrame {
         jlimgVDP5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/perfilVDP.png"))); // NOI18N
 
         jbSalir.setText("Salir!");
+        jbSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSalirActionPerformed(evt);
+            }
+        });
 
         jlimgVDP6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/salirVDP.png"))); // NOI18N
 
@@ -163,9 +171,19 @@ public class VentandaDePartdida_VDP extends javax.swing.JFrame {
     }//GEN-LAST:event_jbCrearParidaActionPerformed
 
     private void jbRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRecordsActionPerformed
-    new Presentacion.VentanRecord().setVisible(true);
+    VentanRecord record = new VentanRecord ();
+    record.setVentanaPadre(this);
+    record.setVisible(true);
+    this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_jbRecordsActionPerformed
+
+    private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
+    this.dispose();
+    ventanaPadre.setVisible(true);
+    
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbSalirActionPerformed
 
     /**
     * @param args the command line arguments
@@ -185,5 +203,5 @@ public class VentandaDePartdida_VDP extends javax.swing.JFrame {
     private javax.swing.JLabel jlimgVDP5;
     private javax.swing.JLabel jlimgVDP6;
     // End of variables declaration//GEN-END:variables
-
+    JFrame ventanaPadre;
 }
