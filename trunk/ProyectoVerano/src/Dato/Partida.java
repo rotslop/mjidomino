@@ -30,11 +30,15 @@ private ListaFicha fichapote;
     }
 
     public Partida(String nickname,String ID, String fechaactual, String fechainicio) {
+        this.nickname = nickname;
         this.ID = ID;
         this.fechaactual = fechaactual;
         this.fechainicio = fechainicio;
-    }
-
+       }
+        public Partida(String nickname,String ID) {
+        this.nickname = nickname;
+        this.ID = ID;
+        }
     public String getID() {
         return ID;
     }

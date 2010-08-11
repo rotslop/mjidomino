@@ -133,4 +133,37 @@ public class ListaUsuario
 
         return false;
     }
+
+    public boolean BuscarUsuario(Usuario objeto)
+    {
+        boolean encontrado = false;
+        Usuario auxiliar = null;
+
+        /*
+         * Se define un iterador inicializado con el iterador de la colección
+         */
+        Iterator iterador = UsuariosRegistrados.iterator();
+
+        /*
+         * Mientras no se encuentre el elemento y existan mas elementos en la
+         * colección, se sigue entrando en el ciclo
+         */
+        while (!encontrado && iterador.hasNext())
+        {
+            /*
+             *  Se obtiene el siguiente objeto del iterador y se le hace un cast
+             *  para asignarlo al objeto de tipo Nodo
+             */
+            auxiliar = (Usuario) iterador.next();
+
+            /*
+             * Se invoca al método equals de la clase Nodo para determinar si son
+             * iguales. En caso de serlo, se encontró el elemento buscado
+             */
+            //if (objeto.equals(auxiliar))
+            if ((objeto.getNickname().contentEquals(auxiliar.getNickname()))&&(objeto.getClave().contentEquals(auxiliar.getClave())))
+                encontrado = true;
+        }
+        return false;
+    }
 }

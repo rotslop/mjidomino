@@ -56,11 +56,12 @@ public class ArchivoXml{
                 Element clave = e.getChild("clave");
                 Element nombre = e.getChild("nombre");
                 Element apellido = e.getChild("apellido");
+                Element fechanac = e.getChild("fechanac");
                 Element avatar = e.getChild("avatar");
 
 
                 /* Se crea un nodo nuevo con la información y se agrega a la lista de usuarios */
-                Usuario elUsuario = new Usuario(nick.getText(),clave.getText(), nombre.getText(),apellido.getText(),avatar.getText());
+                Usuario elUsuario = new Usuario(nick.getText(),clave.getText(), nombre.getText(),apellido.getText(),fechanac.getText(),avatar.getText());
 
                 listaDeUsuarios.AgregarElemento(elUsuario);
             }
@@ -100,6 +101,7 @@ public class ArchivoXml{
             Element clave = new Element("clave");
             Element nombre = new Element("nombre");
             Element apellido = new Element("apellido");
+            Element fechanac = new Element("fechanac");
             Element avatar = new Element("avatar");
 
             /* Se inicializa cada etiqueta con sus valores de la lista */
@@ -107,6 +109,7 @@ public class ArchivoXml{
             clave.setText(nodoAuxiliar.getClave());
             nombre.setText(nodoAuxiliar.getNombre());
             apellido.setText(nodoAuxiliar.getApellido());
+            fechanac.setText(nodoAuxiliar.getFechanaci());
             avatar.setText(nodoAuxiliar.getAvatar());
 
             /* Se añaden las etiquetas a la etiqueta principal (usuario)    */
@@ -115,6 +118,7 @@ public class ArchivoXml{
             usuarios.addContent(clave);
             usuarios.addContent(nombre);
             usuarios.addContent(apellido);
+            usuarios.addContent(fechanac);
             usuarios.addContent(avatar);
 
             /* Se añade el nuevo usuario a la estructura XML */

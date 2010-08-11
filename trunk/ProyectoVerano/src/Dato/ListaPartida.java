@@ -128,4 +128,47 @@ public class ListaPartida
 
         return false;
     }
+    public boolean BuscarElemento(Partida objeto)
+    {
+        boolean encontrado = false;
+        Partida auxiliar = null;
+
+        /*
+         * Se define un iterador inicializado con el iterador de la colección
+         */
+        Iterator iterador = PartidasJugadas.iterator();
+
+        /*
+         * Mientras no se encuentre el elemento y existan mas elementos en la
+         * colección, se sigue entrando en el ciclo
+         */
+        while (!encontrado && iterador.hasNext())
+        {
+            /*
+             *  Se obtiene el siguiente objeto del iterador y se le hace un cast
+             *  para asignarlo al objeto de tipo Nodo
+             */
+            auxiliar = (Partida) iterador.next();
+
+            /*
+             * Se invoca al método equals de la clase Nodo para determinar si son
+             * iguales. En caso de serlo, se encontró el elemento buscado
+             */
+            //if (objeto.equals(auxiliar))
+            if (objeto.getID().contentEquals(auxiliar.getID()))
+                encontrado = true;
+        }
+
+        /*
+         * Si se encontró el elemento, se procede a ejecutar el remove
+         */
+        if (encontrado)
+        {
+            if (PartidasJugadas.remove(auxiliar))
+
+                return true;
+        }
+
+        return false;
+    }
 }
