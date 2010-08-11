@@ -198,6 +198,7 @@ private Jcalendar fechanaci;
         });
 
         jDateChooser1.setDateFormatString("dd/MM/yy");
+        jDateChooser1.setNextFocusableComponent(jDateChooser1);
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -357,24 +358,27 @@ private Jcalendar fechanaci;
 
     private void jbAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAceptarActionPerformed
 
-        if(bgSeleccionarAvatar.isSelected(null)){
-            JOptionPane.showMessageDialog(null,"Seleccione Avatar","Error",JOptionPane.ERROR_MESSAGE);
+      //  if(bgSeleccionarAvatar.isSelected(null)){
 
-        }
-        if(jtfNombre.getText().toString().isEmpty()|| jtfApellido.getText().toString().isEmpty()|| jpfPassword.getText().toString().isEmpty()){
+        //    JOptionPane.showMessageDialog(null,"Seleccione Avatar","Error",JOptionPane.ERROR_MESSAGE);
+
+        //}
+        if(jtfNombre.getText().equals("")|| jtfApellido.getText().equals("")|| jpfPassword.getText().toString().equals("")||bgSeleccionarAvatar.isSelected(null)){
 
            JOptionPane.showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JOptionPane.ERROR_MESSAGE);
 
         }// TODO add your handling code here:
     
-if (!(jtfNombre.getText().toString().isEmpty()|| jtfApellido.getText().toString().isEmpty()|| jpfPassword.getText().toString().isEmpty())){
-    if(Comunicacion.agregarUsuario(jtfNickname.getText(),jpfPassword.getText(), jtfNombre.getText(), jtfApellido.getText(),jDateChooser1.getDate().toString(), avatar)==false){
+        else if(!(jtfNombre.getText().equals("") || jtfApellido.getText().equals("") || jpfPassword.getText().toString().equals("")))
+        {
+            if(Comunicacion.agregarUsuario(jtfNickname.getText(),jpfPassword.getText(), jtfNombre.getText(), jtfApellido.getText(),jDateChooser1.getDate().toString(), avatar)==false){
 
-        JOptionPane.showMessageDialog(null, "El Nombre de Usuario Ya Existe", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "El Nombre de Usuario Ya Existe", "Error", JOptionPane.ERROR_MESSAGE);
     }
  else {
     ventanaPadre.setVisible(true);
     this.dispose();
+
     }
     
         }
@@ -391,8 +395,8 @@ if (!(jtfNombre.getText().toString().isEmpty()|| jtfApellido.getText().toString(
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
 
-    //ventanaPadre.setVisible(true);
-    this.dispose();
+    ventanaPadre.setVisible(true);
+   
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosed
 
