@@ -5,6 +5,7 @@
 
 package Logica;
 import Dato.ListaUsuario;
+import Dato.ListaPartida;
 
 /**
  *
@@ -13,6 +14,8 @@ import Dato.ListaUsuario;
 public class Datos
 {
     private static ListaUsuario listadoDeUsuario = null;
+    private static ListaPartida listadoDePartidas = null;
+    private int numero=0;
 
     private Datos()
     {
@@ -22,10 +25,17 @@ public class Datos
     {
         if (listadoDeUsuario == null)
             listadoDeUsuario = new ListaUsuario();
+        if (listadoDePartidas == null)
+            listadoDePartidas = new ListaPartida();
+
     }
 
     public static ListaUsuario getListadoDeUsuario() {
         return listadoDeUsuario;
+    }
+
+    public static ListaPartida getListadoDePartidas() {
+        return listadoDePartidas;
     }
 
     public static void ImprimirLista(){
