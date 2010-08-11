@@ -3,20 +3,25 @@
  * and open the template in the editor.
  */
 
-package Dato;
+package cliente;
 import ve.edu.ucab.cliente.ClienteSocket;
 /**
  *
  * @author Minerva Verdugo Ruiz
  */
-public class ClienteText {
-public static void main(String[] args) {
-ClienteSocket cliente = new ClienteSocket();
-String resultado = cliente.ejecutarPeticion("1:gerardo", "localhost",7687);
-System.out.println(resultado);
 
+//
+public class ClienteTest {
+
+
+public static void main(String[] args) {
+
+ClienteSocket cliente = new ClienteSocket();
+String resultado = cliente.ejecutarPeticion("1:MINE", "localhost",7687);
+System.out.println(resultado);
 }
 }
+
 
 
 
