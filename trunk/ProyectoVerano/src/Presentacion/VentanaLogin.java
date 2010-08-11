@@ -210,7 +210,7 @@ JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VA
 
         }
  else{
-     if(Comunicacion.agregarUsuario(jtfUsername.getText(),jpwPassword.getText(), "", "","","")==false){
+     if(Comunicacion.LogearUsuario(jtfUsername.getText(),jpwPassword.getText(), "", "","","")==false){
      new VentanRecord().setVisible(true);
      }
  else{
