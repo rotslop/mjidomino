@@ -10,23 +10,24 @@
  */
 
 package Presentacion;
-import Dato.Usuario;
-import Dato.Jcalendar;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.ButtonModel;
 import Logica.Comunicacion;
+import com.toedter.calendar.JCalendar;
+import java.text.SimpleDateFormat;
 /**
  *
  * @author Isra
  */
 public class VentanaRegistro extends javax.swing.JFrame {
 private String nickname,clave,nombre,apellido,avatar;
-private Jcalendar fechanaci;
+private JCalendar fechanaci;
     /** Creates new form VentanaRegistro */
     public VentanaRegistro() {
         initComponents();
         ventanaPadre = null;
+        fechanaci = new JCalendar();
    
 
     }
@@ -34,6 +35,7 @@ private Jcalendar fechanaci;
     public void setVentanaPadre(JFrame ventanaPadre) {
         this.ventanaPadre = ventanaPadre;
     }
+
 
 
     /** This method is called from within the constructor to
@@ -358,31 +360,26 @@ private Jcalendar fechanaci;
 
     private void jbAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAceptarActionPerformed
 
-      //  if(bgSeleccionarAvatar.isSelected(null)){
+      
+            if(!(jtfNombre.getText().equals("") || jtfApellido.getText().equals("") || jpfPassword.getText().toString().equals("")))
+            {
+                SimpleDateFormat xlsFormatoFecha = new SimpleDateFormat("dd/MM/yy");
+                String resultado = xlsFormatoFecha.format(fechanaci.getCalendar().getInstance().getTime());
+                System.out.println("resultado de la conversion de la fecha es " + resultado);
 
-        //    JOptionPane.showMessageDialog(null,"Seleccione Avatar","Error",JOptionPane.ERROR_MESSAGE);
+                if(Comunicacion.agregarUsuario(jtfNickname.getText(),jpfPassword.getText(), jtfNombre.getText(), jtfApellido.getText(),resultado, avatar)==false)
+                {
+                    JOptionPane.showMessageDialog(null, "El Nombre de Usuario Ya Existe", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                else
+                {
+                    ventanaPadre.setVisible(true);
+                    this.dispose();
 
-        //}
-        if(jtfNombre.getText().equals("")|| jtfApellido.getText().equals("")|| jpfPassword.getText().toString().equals("")||bgSeleccionarAvatar.isSelected(null)){
-
-           JOptionPane.showMessageDialog(null,"Todos los datos son Oblogatorios","Error",JOptionPane.ERROR_MESSAGE);
-
-        }// TODO add your handling code here:
-    
-        else if(!(jtfNombre.getText().equals("") || jtfApellido.getText().equals("") || jpfPassword.getText().toString().equals("")))
-        {
-            if(Comunicacion.agregarUsuario(jtfNickname.getText(),jpfPassword.getText(), jtfNombre.getText(), jtfApellido.getText(),jDateChooser1.getDate().toString(), avatar)==false){
-
-            JOptionPane.showMessageDialog(null, "El Nombre de Usuario Ya Existe", "Error", JOptionPane.ERROR_MESSAGE);
-    }
- else {
-    ventanaPadre.setVisible(true);
-    this.dispose();
-
-    }
-    
-        }
-        //fechanaci = J
+                }
+            }
+            else
+                JOptionPane.showMessageDialog(null,"Todos los datos son Obligatorios","Error",JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jbAceptarActionPerformed
 
     private void jpfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpfPasswordActionPerformed

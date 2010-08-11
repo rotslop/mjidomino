@@ -202,19 +202,21 @@ private Jcalendar fechanaci;
     }//GEN-LAST:event_jbRegistrarActionPerformed
 
     private void jbAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAceptarActionPerformed
-
+Comunicacion.solicitarCargaArchivo();
        
         if (jtfUsername.getText().toString().isEmpty()|| jpwPassword.getText().toString().isEmpty()){
 
 JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VALIDACION",JOptionPane.ERROR_MESSAGE);
 
         }
- else{
-     if(Comunicacion.LogearUsuario(jtfUsername.getText(),jpwPassword.getPassword().toString(), "", "","","")==false){
+ else if((Comunicacion.LogearUsuario(jtfUsername.getText(),jpwPassword.getText(), "", "","","")==false)){
     System.out.println("Mamaste");
      }
  else {
-     new VentandaDePartdida_VDP().setVisible(true);
+     VentandaDePartdida_VDP ventana1 = new VentandaDePartdida_VDP();
+     ventana1.setVisible(true);
+     ventana1.setVentanaPadre(this);
+     this.setVisible(false);
  }
             //new VentandaDePartdida_VDP().setVisible(true);
           //  nickname =jtfUsername.getText();
@@ -225,7 +227,7 @@ JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VA
         //avatar= "";
     }//GEN-LAST:event_jbAceptarActionPerformed
 
-    }
+    
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
 
         jtfUsername.setText("");
