@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import Logica.Comunicacion;
+import Logica.Datos;
 
 //import Logica.Comunicacion;
 /**
@@ -25,9 +26,22 @@ public class Main {
         Comunicacion.solicitarCargaArchivo();
         Comunicacion.ImprimirListaUsuario();
        
+        Datos.IniciarPartidaNueva("javiccs","123");
+        Datos.ImprimirListaFichas();
+        Datos.IniciarPartidaNueva("javiccs","12");
+        Datos.solicitarGuardarArchivoPartida();
+        Datos.ImprimirListapartidas();
+//        Datos.ImprimirListaFichas();
+//        Comunicacion.solicitarGuardarPartida();
 
-        new VentanaLogin().setVisible(true);
-         Comunicacion.solicitarGuardarArchivo();
+        
+
+     
+        
+       
+
+        //new VentanaLogin().setVisible(true);
+         //Comunicacion.solicitarGuardarArchivo();
     }
 
 }
