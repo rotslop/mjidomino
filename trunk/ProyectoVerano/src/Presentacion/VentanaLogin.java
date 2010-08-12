@@ -290,4 +290,3 @@ Comunicacion.solicitarGuardarArchivo();
     private javax.swing.JTextField jtfUsername;
     // End of variables declaration//GEN-END:variables
 
-}
