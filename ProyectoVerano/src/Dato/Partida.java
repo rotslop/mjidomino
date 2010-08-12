@@ -12,14 +12,17 @@ import java.util.*;
 public class Partida {
 
 private String nickname;
-private String ID;
+private int ID;
 private String fechaactual;
 private String fechainicio;
 private ListaFicha fichaservidor;
 private ListaFicha fichausuario;
 private ListaFicha fichapote;
 
-    public Partida(String nickname, String ID, String fechaactual, String fechainicio, ListaFicha fichaservidor, ListaFicha fichausuario, ListaFicha fichapote) {
+
+
+
+    public Partida(String nickname, int ID, String fechaactual, String fechainicio, ListaFicha fichaservidor, ListaFicha fichausuario, ListaFicha fichapote) {
         this.nickname = nickname;
         this.ID = ID;
         this.fechaactual = fechaactual;
@@ -28,22 +31,27 @@ private ListaFicha fichapote;
         this.fichausuario = fichausuario;
         this.fichapote = fichapote;
     }
-
-    public Partida(String nickname,String ID, String fechaactual, String fechainicio) {
+// Constructor de Cargar Partida
+    public Partida(String nickname,int ID, String fechaactual, String fechainicio) {
         this.nickname = nickname;
         this.ID = ID;
         this.fechaactual = fechaactual;
         this.fechainicio = fechainicio;
        }
-        public Partida(String nickname,String ID) {
+    //COnstructor de Crear  yGuardar
+        public Partida(String nickname,int ID,String fechainicio, ListaFicha fichaservidor, ListaFicha fichausuario, ListaFicha fichapote) {
         this.nickname = nickname;
         this.ID = ID;
+        this.fechainicio=fechainicio;
+        this.fichapote=fichapote;
+        this.fichausuario=fichausuario;
+        this.fichaservidor=fichaservidor;
         }
-    public String getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 
