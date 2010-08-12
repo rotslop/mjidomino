@@ -66,5 +66,5 @@ public class Comunicacion
         Datos.GuardarArchivoPartida();
    }
 
-// </Procedimientos de Guardado>
+// </Procedimientos de Guardados>
 }
