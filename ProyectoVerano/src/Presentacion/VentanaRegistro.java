@@ -363,8 +363,8 @@ private JCalendar fechanaci;
       
             if(!(jtfNombre.getText().equals("") || jtfApellido.getText().equals("") || jpfPassword.getText().toString().equals("")))
             {
-                SimpleDateFormat xlsFormatoFecha = new SimpleDateFormat("dd/MM/yy");
-                String resultado = xlsFormatoFecha.format(fechanaci.getCalendar().getInstance().getTime());
+                //SimpleDateFormat xlsFormatoFecha = new SimpleDateFormat("dd/MM/yy");
+                String resultado = new SimpleDateFormat("dd/MM/yy").format(jDateChooser1.getDate());//xlsFormatoFecha.format(fechanaci.getCalendar().getInstance().getTime());
                 System.out.println("resultado de la conversion de la fecha es " + resultado);
 
                 if(Comunicacion.agregarUsuario(jtfNickname.getText(),jpfPassword.getText(), jtfNombre.getText(), jtfApellido.getText(),resultado, avatar)==false)
