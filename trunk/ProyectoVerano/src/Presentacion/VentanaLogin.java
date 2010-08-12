@@ -31,6 +31,7 @@ public class VentanaLogin extends javax.swing.JFrame {
     }
 private String nickname,clave,nombre,apellido,avatar;
 private Jcalendar fechanaci;
+private String solicitarLogeo;
     /** Creates new form VentanaLogin */
     public VentanaLogin() {
         initComponents();
@@ -211,12 +212,15 @@ JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VA
         }
  else if((Comunicacion.LogearUsuario(jtfUsername.getText(),jpwPassword.getText(), "", "","","")==false)){
     System.out.println("Mamaste");
+    
      }
  else {
-     VentandaDePartdida_VDP ventana1 = new VentandaDePartdida_VDP();
-     ventana1.setVisible(true);
-     ventana1.setVentanaPadre(this);
-     this.setVisible(false);
+     solicitarLogeo=("1"+":"+jtfUsername.getText()+":"+jpwPassword.getText());
+     System.out.println(solicitarLogeo);
+    //VentandaDePartdida_VDP ventana1 = new VentandaDePartdida_VDP();
+     //ventana1.setVisible(true);
+     //ventana1.setVentanaPadre(this);
+     //this.setVisible(false);
  }
             //new VentandaDePartdida_VDP().setVisible(true);
           //  nickname =jtfUsername.getText();
