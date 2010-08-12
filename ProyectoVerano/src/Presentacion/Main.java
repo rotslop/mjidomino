@@ -25,7 +25,7 @@ public class Main {
         Comunicacion.solicitarInicializarEstruturas();
         Comunicacion.solicitarCargaArchivo();
         Comunicacion.ImprimirListaUsuario();
-       
+
         Datos.IniciarPartidaNueva("javiccs","123");
         Datos.ImprimirListaFichas();
         Datos.IniciarPartidaNueva("javiccs","12");
@@ -34,11 +34,11 @@ public class Main {
 //        Datos.ImprimirListaFichas();
 //        Comunicacion.solicitarGuardarPartida();
 
-        
 
-     
-        
-       
+
+
+
+
 
         //new VentanaLogin().setVisible(true);
          //Comunicacion.solicitarGuardarArchivo();
