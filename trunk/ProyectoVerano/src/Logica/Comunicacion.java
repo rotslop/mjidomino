@@ -6,10 +6,7 @@
 package Logica;
 
 
-import Dato.ArchivoXml;
-import Dato.Usuario;
-import Dato.Partida;
-import Dato.ListaFicha;
+
 
 
 /**
@@ -19,55 +16,55 @@ import Dato.ListaFicha;
 public class Comunicacion
 
 {
-    
-
-// Todo Las Acciones que tienen que ver con Usuario
-
-   public static void solicitarCargaArchivo()
-   {
-       ArchivoXml.leerArchivoXML(Datos.getListadoDeUsuario());
-    }
-    public static void solicitarGuardarArchivo()
-   {
-       ArchivoXml.guardarArchivoXML(Datos.getListadoDeUsuario());
-
+    public void generarInstancia() {
+        Datos.generarInstancia();
     }
 
-   public static void solicitarInicializarEstruturas()
-   {
-       Datos.generarInstancia();
-   }
 
-   public static boolean agregarUsuario(String nickname, String clave, String nombre, String apellido,String fechanaci,String avatar)
-   {
-       Usuario elUsuario = new Usuario(nickname,clave,nombre,apellido,fechanaci,avatar);
-       return(Datos.getListadoDeUsuario().AgregarElemento(elUsuario));
-          }
-      public static boolean LogearUsuario(String nickname, String clave, String nombre, String apellido,String fechanaci,String avatar)
-   {
-       Usuario elUsuario = new Usuario(nickname,clave,nombre,apellido,fechanaci,avatar);
-       return(Datos.getListadoDeUsuario().BuscarUsuario(elUsuario));
-          }
-
-    public static void ImprimirListaUsuario(){
-        Datos.ImprimirLista();
+// <Procedimientos de Imprimir>
+    public static void SolicitarListaUsuario() {
+        Datos.ImprimirListaUsuario();
     }
-// </Todo Las Acciones que tienen que ver con Usuario>
-    
-   
- /// <Toda las Acciones que tiene quer ver con Partidas>
-    
-    
-public static boolean GuardarPartida (String nickname,String ID, String fechaactual, String fechainicio, ListaFicha fichaservidor, ListaFicha fichausuario, ListaFicha fichapote)
+
+    public static void SolicitarListaPartidas() {
+        Datos.ImprimirListaPartidas();
+    }
+
+    public static void SolicitarListaFichas(){
+        Datos.ImprimirListaFichas();
+    }
+
+    // </Procedimientos de Imprimir>
+
+    // <Usuario>
+    public static boolean SolicitarRegistrarUsuario(String nickname, String clave, String nombre, String apellido,String fechanaci,String avatar)
    {
-       //String ID=String.valueOf(Datos.)
-       Partida laPartida = new Partida (nickname,ID,fechaactual,fechainicio);
-       return(Datos.getListadoDePartidas().AgregarElemento(laPartida));    
-   }
- public static boolean CargarPartida (String nickname,String ID)
+       return(Datos.RegistrarUsuario(nickname, clave, nombre, apellido, fechanaci, avatar));
+    }
+
+    public static boolean SolicitarLogearUsuario(String nickname, String clave)
+    {
+        return(Datos.LogearUsuario(nickname, clave));
+    }
+   // </Usuario>
+
+    // <Procedimientos de Partidas>
+
+    public static boolean SolicitarIniciarPartidaNueva(String nickname, String fechainicio) {
+        return (Datos.IniciarPartidaNueva(nickname, fechainicio));
+    }
+
+    // </Procedimientos de Partidas>
+
+      // <Procedimientos de Guardado>
+    public static void SolicitarGuardarArchivoUsuario()
    {
-       //String ID=String.valueOf(Datos.)
-       Partida laPartida = new Partida (nickname,ID);
-       return(Datos.getListadoDePartidas().BuscarElemento(laPartida));
+     Datos.GuardarArchivoPartida();
    }
+   public static void SolicitarGuardarArchivoPartida()
+   {
+        Datos.GuardarArchivoPartida();
+   }
+
+// </Procedimientos de Guardado>
 }
