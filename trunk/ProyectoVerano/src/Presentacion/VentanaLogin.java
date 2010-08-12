@@ -10,10 +10,6 @@
  */
 
 package Presentacion;
-import java.awt.*;
-import Dato.Usuario;
-import Dato.Jcalendar;
-import Presentacion.VentanaLogin;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.JOptionPane;
@@ -30,7 +26,7 @@ public class VentanaLogin extends javax.swing.JFrame {
         }
     }
 private String nickname,clave,nombre,apellido,avatar;
-private Jcalendar fechanaci;
+
 private String solicitarLogeo;
     /** Creates new form VentanaLogin */
     public VentanaLogin() {
@@ -217,6 +213,7 @@ JOptionPane.showMessageDialog(null,"Introduzca Nombre de Usuario Y Password","VA
  else {
      solicitarLogeo=("1"+":"+jtfUsername.getText()+":"+jpwPassword.getText());
      System.out.println(solicitarLogeo);
+
     //VentandaDePartdida_VDP ventana1 = new VentandaDePartdida_VDP();
      //ventana1.setVisible(true);
      //ventana1.setVentanaPadre(this);
@@ -274,7 +271,7 @@ Comunicacion.solicitarGuardarArchivo();
         this.jtfUsername = jtfUsername;
     }
 
-    Usuario logear = new Usuario(nickname,clave,"","", "","");
+
     /**
     * @param args the command line arguments
     */
