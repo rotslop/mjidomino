@@ -43,10 +43,10 @@ public class CompararID implements Comparator
         Partida PrimerObjetoPartida = (Partida) primerObjeto;
         Partida SegundoObjetoUsuario = (Partida) segundoObjeto;
 
-        String IDPrimerObjeto = PrimerObjetoPartida.getID();
-        String IDSegundoObjeto = SegundoObjetoUsuario.getID();
+        int IDPrimerObjeto = PrimerObjetoPartida.getID();
+        int IDSegundoObjeto = SegundoObjetoUsuario.getID();
 
-        int resultado = IDPrimerObjeto.compareTo(IDSegundoObjeto);
+        int resultado = (IDPrimerObjeto=IDSegundoObjeto);
 
         /*
          * Si resultado es igual a cero, es porque se trata del mismo objeto
