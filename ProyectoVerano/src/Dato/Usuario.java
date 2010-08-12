@@ -12,6 +12,8 @@ public class Usuario {
     private String avatar;
     private int Score;
 
+
+    // Constructor Para Crear un usuario
     public Usuario(String nickname, String clave, String nombre, String apellido, String fechanaci,String avatar) {
         this.nickname = nickname;
         this.clave = clave;
@@ -20,13 +22,10 @@ public class Usuario {
         this.fechanaci = fechanaci;
         this.avatar= avatar;
     }
-    // Constructor para la Prueba
-        public Usuario(String nickname, String clave, String nombre, String apellido,String avatar) {
+    // Constructor para Logear un Usuario
+        public Usuario(String nickname, String clave) {
         this.nickname = nickname;
         this.clave = clave;
-        this.nombre = nombre;
-        this.apellido=apellido;
-        this.avatar=apellido;
     }
 
     public String getApellido() {
@@ -72,8 +71,6 @@ public class Usuario {
     public String getNombre() {
         return nombre;
     }
-
-
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
